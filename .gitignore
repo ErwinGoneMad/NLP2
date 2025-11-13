@@ -22,5 +22,6 @@ poem.txt
 *.swo
 
 # uv
-uv.lock
+# uv.lock - versionné pour reproductibilité
 
+models/
