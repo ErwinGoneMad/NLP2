@@ -8,8 +8,3 @@ dependencies = [
     "huggingface-hub>=0.20.0",
     "jupyter>=1.0.0",
 ]
-
-[build-system]
-requires = ["hatchling"]
-build-backend = "hatchling.build"
-
