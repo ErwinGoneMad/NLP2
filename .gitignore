@@ -1,0 +1,26 @@
+# Environnement virtuel
+.venv/
+venv/
+env/
+ENV/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# Fichiers générés
+poem.txt
+*.txt
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# uv
+uv.lock
+
