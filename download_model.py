@@ -7,7 +7,6 @@ from huggingface_hub import hf_hub_download
 from pathlib import Path
 
 # Modèle SOTA 1B, quantifié à 4-bits (Q4_K_M)
-# Réduit le modèle de ~3GB à ~800MB avec une perte minimale d'intelligence
 REPO_ID = "MaziyarPanahi/Llama-3.2-1B-Instruct-GGUF"
 FILENAME = "Llama-3.2-1B-Instruct.Q4_K_M.gguf"
 
@@ -27,7 +26,6 @@ try:
     )
     print(f"\n✅ Succès! Modèle sauvegardé dans: {model_path}")
 except Exception as e:
-    print(f"\n❌ Erreur lors du téléchargement: {e}")
-    print("\nVérifiez votre connexion internet et réessayez.")
+    print(f"\nerreur lors du téléchargement: {e}")
     exit(1)
 
