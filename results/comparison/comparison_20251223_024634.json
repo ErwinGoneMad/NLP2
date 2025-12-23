@@ -1,0 +1,77 @@
+{
+  "timestamp": "20251223_024634",
+  "config": {
+    "topic_graph": {
+      "nodes": [
+        "deuil",
+        "mémoire",
+        "océan"
+      ],
+      "edges": [
+        [
+          "deuil",
+          "mémoire"
+        ],
+        [
+          "mémoire",
+          "océan"
+        ]
+      ]
+    },
+    "form_spec": {
+      "form": "sonnet",
+      "total_lines": 14
+    },
+    "generation_params": {
+      "max_tokens": 1000,
+      "temperature": 0.8,
+      "top_p": 0.95
+    }
+  },
+  "approaches": {
+    "baseline": {
+      "description": "Modèle générique + prompt simple",
+      "poem": "Au coucher du soleil, dans les vagues silence,\nOù les oiseaux chantent les larmes de la vie,\nJe me souviens des moments de douleur,\nLisant la mémoire de mon amour qui s'effondre.\n\nLes vagues dégagent des flots de souffrance,\nEt les étoiles qui éclairent le ciel nocturne,\nForment un ciel de lumière et de douleur,\nMême si je trouve un refuge dans la nuit.\n\nL'océan est un royaume de sentiments,\nOù les vagues me tiennent dans leurs bras,\nLes vagues me rappellent les moments où j'ai aimé,\nEt dans les vagues, mes souvenirs se perdent.\n\nEt puis, la nuit s'élève, et les vagues s'en vont,\nEt je reste seul, seul, seul, dans la douleur.\n\n(Note : Le sonnet est traduit en français par le poète. Un sonnet est généralement composé de 14 vers, dont cinq quatrièmes et cinq premiers vers qui forment une structure. Le sonnet traditionnel français est très classique, et ne contient généralement pas de rimures.)",
+      "metrics": {
+        "word_count": 158,
+        "line_count": 15,
+        "char_count": 904,
+        "vocab_size": 89,
+        "avg_line_length": 59.06666666666667
+      }
+    },
+    "structure_only": {
+      "description": "Modèle générique + graphe thématique",
+      "poem": "Voici une poésie sonnet en français, suivant l'ordre spécifié :\n\nDans les lacs sombres, je sens mon deuil,\nQui s'entraîne à chaque mouvement de l'eau,\nEt dans les ténèbres, je sens ma mémoire,\nQui s'écoule vers l'avenir, sans regret.\n\nLes eaux qui font calme mon cœur,\nTout en me souffrant, dans mon âme, je sens,\nLa douceur des rivières qui se mettent,\nÀ chanter l'oraison de la mort.\n\nMais au sein de ces eaux, je me sens,\nRéveillé à un autre temps, à une autre vie,\nAu cœur de ce silence, une lumière se sens,\nQui me fait voyer la beauté de l'oubli.\n\nAlors je me sens libre, libre de mémoire,\nDe tout ce qui me pénètre, de tout ce qui me fait mourir.",
+      "metrics": {
+        "word_count": 124,
+        "line_count": 15,
+        "char_count": 653,
+        "vocab_size": 71,
+        "avg_line_length": 42.333333333333336
+      }
+    },
+    "specialization_only": {
+      "description": "Modèle fine-tuné + prompt simple",
+      "poem": "Tout le monde s'apprêtait à mourir ;\nJe n'osai pas dormir, il me semblait.\nIl faisait beau, mais la nuit allait d'heure en heure ;\nLa nuit allait, et je ne voyais pas rien.\nLes oiseaux chantaient, la lune était blanche.\nJe me suis éveillé, pour voir de plus loin\nCe que le grand ciel d'argent et de sable\nPourtant étoilé s'obsérait dans l'azur.\nLe grand ciel était, et je me sentais malade.\nJ'ai vu, près de moi, un pêcheur, le cœur pâle\nDes eaux n'a pas d'onde, il n'en sentit rien.\nEn ce moment, je me sens seul, seul comme on\nSe sent dans un jardin dans une ombre.\nJ'ai vu, près de moi, un pêcheur, le cœur pâle,\nEt j'ai vu qu'il était seul, en ce moment.\nAilleurs, je sentais la tristesse de voir,\nLa tristesse d'être seul, d'abord, d'être seul.",
+      "metrics": {
+        "word_count": 143,
+        "line_count": 17,
+        "char_count": 749,
+        "vocab_size": 82,
+        "avg_line_length": 43.11764705882353
+      }
+    },
+    "structure_specialization": {
+      "description": "Modèle fine-tuné + graphe thématique",
+      "poem": "Deuil! ô le sommeil de mes yeux!\nLes yeux sont fermés, comme la mer!\nJe suis venu, ô mes yeux, deuil!\nEt je me sens dans l'onde de la mort!\nMes yeux sont ferme, comme la mer!\nEt deuil! ô le sommeil de mes yeux!\nLa nuit est sombre, comme la mer!\nJe suis venu, ô mes yeux, deuil!\nEt je me sens dans l'onde de la mort!\nMais j'entends un calme qui me réveille,\nLa mer est calme, comme la mort!\nJ'entends une voix qui me réveille,\nLa nuit est calme, comme la mort!\nMais j'entends une voix qui me réveille.\nCette voix est la mémoire!",
+      "metrics": {
+        "word_count": 107,
+        "line_count": 15,
+        "char_count": 527,
+        "vocab_size": 36,
+        "avg_line_length": 34.2
+      }
+    }
+  }
+}
