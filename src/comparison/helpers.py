@@ -90,20 +90,58 @@ def generate_with_unsloth(model: Any, tokenizer: Any, prompt: str, max_tokens: i
     return generated_text
 
 
-def compute_metrics(poem_text: str) -> Dict[str, float]:
+def compute_metrics(
+    poem_text: str, 
+    topic_graph: Optional[Dict[str, Any]] = None
+) -> Dict[str, float]:
+    """
+    Calcule les métriques de base et avancées pour un poème.
+    
+    Args:
+        poem_text: Le texte du poème
+        topic_graph: Dictionnaire avec 'nodes' et 'edges' (optionnel, pour métriques avancées)
+    
+    Returns:
+        Dictionnaire avec toutes les métriques (base + avancées si topic_graph fourni)
+    """
     if not poem_text:
         return {}
     
+    # Métriques de base (toujours calculées)
     lines = [line.strip() for line in poem_text.split("\n") if line.strip()]
     words = poem_text.split()
     chars = len(poem_text)
     unique_words = len(set(word.lower().strip(".,!?;:()[]{}") for word in words))
     
-    return {
+    base_metrics = {
         "word_count": len(words),
         "line_count": len(lines),
         "char_count": chars,
         "vocab_size": unique_words,
         "avg_line_length": sum(len(line) for line in lines) / len(lines) if lines else 0
     }
+    
+    # Si topic_graph fourni, calculer les métriques avancées
+    if topic_graph is not None:
+        try:
+            from src.metrics.advanced_metrics import compute_all_advanced_metrics
+            
+            # Charger le modèle d'embeddings (singleton)
+            from src.metrics.embeddings import load_embedding_model
+            embedding_model = load_embedding_model()
+            
+            # Calculer toutes les métriques avancées
+            advanced_metrics = compute_all_advanced_metrics(
+                poem_text, 
+                topic_graph, 
+                embedding_model
+            )
+            
+            # Fusionner avec les métriques de base
+            base_metrics.update(advanced_metrics)
+        except Exception as e:
+            print(f"Erreur lors du calcul des métriques avancées: {e}")
+            # En cas d'erreur, retourner seulement les métriques de base
+    
+    return base_metrics
 

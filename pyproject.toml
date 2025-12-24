@@ -7,4 +7,6 @@ dependencies = [
     "llama-cpp-python>=0.2.0",
     "huggingface-hub>=0.20.0",
     "jupyter>=1.0.0",
+    "matplotlib>=3.7.5",
+    "pandas>=2.0.3",
 ]

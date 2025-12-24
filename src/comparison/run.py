@@ -36,7 +36,7 @@ def run_comparison(
     results["baseline"] = {
         "description": "Modèle générique + prompt simple",
         "poem": poem_baseline,
-        "metrics": compute_metrics(poem_baseline)
+        "metrics": compute_metrics(poem_baseline, topic_graph)
     }
     
     messages_structure = [
@@ -54,7 +54,7 @@ def run_comparison(
     results["structure_only"] = {
         "description": "Modèle générique + graphe thématique",
         "poem": poem_structure,
-        "metrics": compute_metrics(poem_structure)
+        "metrics": compute_metrics(poem_structure, topic_graph)
     }
     
     if finetuned_model is not None:
@@ -73,7 +73,7 @@ def run_comparison(
     results["specialization_only"] = {
         "description": "Modèle fine-tuné + prompt simple",
         "poem": poem_specialization,
-        "metrics": compute_metrics(poem_specialization)
+        "metrics": compute_metrics(poem_specialization, topic_graph)
     }
     
     if finetuned_model is not None:
@@ -92,7 +92,7 @@ def run_comparison(
     results["structure_specialization"] = {
         "description": "Modèle fine-tuné + graphe thématique",
         "poem": poem_combined,
-        "metrics": compute_metrics(poem_combined)
+        "metrics": compute_metrics(poem_combined, topic_graph)
     }
     
     return results

@@ -1,4 +1,4 @@
-from typing import Any, Dict, List
+from typing import Any, Dict, List, Optional
 from .critique import generate_critique
 from .revision import generate_revision
 from src.comparison.helpers import compute_metrics
@@ -13,11 +13,12 @@ def run_iterative_generation(
     num_iterations: int = 2,
     model_type: str = "generic",
     finetuned_model: Any = None,
-    finetuned_tokenizer: Any = None
+    finetuned_tokenizer: Any = None,
+    topic_graph: Optional[Dict[str, Any]] = None
 ) -> Dict[str, Any]:
     result = {
         "original": poem,
-        "original_metrics": compute_metrics(poem),
+        "original_metrics": compute_metrics(poem, topic_graph),
         "iterations": []
     }
 
@@ -49,7 +50,7 @@ def run_iterative_generation(
                 "iteration": i + 1,
                 "critique": critique,
                 "revised": revised_poem,
-                "metrics": compute_metrics(revised_poem)
+                "metrics": compute_metrics(revised_poem, topic_graph)
             }
 
             result["iterations"].append(iteration_result)
