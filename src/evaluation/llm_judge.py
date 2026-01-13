@@ -208,20 +208,16 @@ Réponds UNIQUEMENT au format JSON suivant (sans texte supplémentaire) :
     try:
         evaluation = json.loads(response_text)
     except json.JSONDecodeError as e:
-        # Essayer de nettoyer le JSON en extrayant seulement la partie JSON valide
         try:
-            # Extraire le JSON entre les premières { et dernières }
             start = response_text.find('{')
             end = response_text.rfind('}')
             if start != -1 and end != -1 and end > start:
                 json_str = response_text[start:end+1]
-                # Nettoyer les échappements problématiques : remplacer \ suivi d'un caractère non-échappable par \\
                 json_str = re.sub(r'\\(?![nrtbf"\\/u0123456789abcdefABCDEF])', r'\\\\', json_str)
                 evaluation = json.loads(json_str)
             else:
                 raise e
         except (json.JSONDecodeError, ValueError):
-            # Si ça échoue encore, essayer d'extraire les valeurs avec regex
             evaluation = {
                 "overall_score": 0,
                 "coherence_score": 0,
@@ -231,7 +227,6 @@ Réponds UNIQUEMENT au format JSON suivant (sans texte supplémentaire) :
                 "language_mastery": 0,
                 "feedback": "Erreur lors du parsing de la réponse JSON"
             }
-            # Essayer d'extraire les scores avec regex
             for key in ["overall_score", "coherence_score", "poetic_quality", "theme_adherence", "originality", "language_mastery"]:
                 match = re.search(rf'"{key}"\s*:\s*(\d+(?:\.\d+)?)', response_text)
                 if match:
@@ -239,7 +234,6 @@ Réponds UNIQUEMENT au format JSON suivant (sans texte supplémentaire) :
                         evaluation[key] = float(match.group(1))
                     except (ValueError, AttributeError):
                         pass
-            # Extraire le feedback (gérer les échappements)
             feedback_match = re.search(r'"feedback"\s*:\s*"((?:[^"\\]|\\.)*)"', response_text, re.DOTALL)
             if feedback_match:
                 feedback_text = feedback_match.group(1)

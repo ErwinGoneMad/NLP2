@@ -18,7 +18,7 @@ def expand_graph_with_embeddings(
     
     Args:
         topic_graph: Dictionnaire avec 'nodes' (liste de thèmes) et 'edges' (liste de transitions)
-        embedding_model: Le modèle d'embeddings (optionnel, chargé automatiquement si None)
+        embedding_model: Le modèle d'embeddings
         top_k: Nombre de mots proches à trouver pour chaque nœud
     
     Returns:
@@ -29,26 +29,18 @@ def expand_graph_with_embeddings(
         embedding_model = load_embedding_model()
     
     if embedding_model is None:
-        # Retourner le graphe original si le modèle n'est pas disponible
         return topic_graph.copy()
     
     nodes = topic_graph.get("nodes", [])
     if not nodes:
         return topic_graph.copy()
     
-    # Créer une copie du graphe pour ne pas modifier l'original
     expanded_graph = topic_graph.copy()
     expanded_graph["expanded_nodes"] = {}
     
     try:
         from src.metrics.embeddings import encode_text, cosine_similarity
         
-        # Vocabulaire français basique pour trouver des mots proches
-        # En pratique, on pourrait utiliser un vocabulaire plus riche
-        # Pour l'instant, on utilise une approche simplifiée : encoder le nœud
-        # et trouver des mots similaires dans un vocabulaire prédéfini
-        
-        # Vocabulaire français étendu lié aux thèmes poétiques
         common_french_words = [
             "amour", "douleur", "joie", "tristesse", "mélancolie", "bonheur",
             "souvenir", "mémoire", "oubli", "passé", "présent", "futur",
@@ -74,7 +66,6 @@ def expand_graph_with_embeddings(
             "liberté", "contrainte", "libération", "captivité", "envol"
         ]
         
-        # Encoder tous les mots du vocabulaire une seule fois
         vocab_embeddings = None
         try:
             from src.metrics.embeddings import encode_batch
@@ -82,7 +73,6 @@ def expand_graph_with_embeddings(
         except Exception:
             pass
         
-        # Pour chaque nœud, trouver les mots les plus proches
         for node in nodes:
             node_embedding = encode_text(node, embedding_model)
             if node_embedding is None:
@@ -92,7 +82,6 @@ def expand_graph_with_embeddings(
                 }
                 continue
             
-            # Si on a le vocabulaire encodé, calculer les similarités
             if vocab_embeddings is not None:
                 similarities = []
                 node_lower = node.lower().strip()
@@ -101,21 +90,17 @@ def expand_graph_with_embeddings(
                     word = common_french_words[i]
                     word_lower = word.lower().strip()
                     
-                    # Exclure le nœud lui-même et les mots identiques
                     if word_lower == node_lower or word_lower in node_lower or node_lower in word_lower:
                         continue
                     
                     sim = cosine_similarity(node_embedding, word_emb)
                     
-                    # Filtrer les similarités trop élevées (probablement des mots identiques)
                     if sim < 0.98:
                         similarities.append((word, sim))
                 
-                # Trier par similarité décroissante et prendre les top_k
                 similarities.sort(key=lambda x: x[1], reverse=True)
                 top_words = similarities[:top_k]
                 
-                # Si on n'a pas assez de mots, prendre ceux qu'on a
                 if len(top_words) < top_k and len(similarities) > 0:
                     top_words = similarities[:min(top_k, len(similarities))]
                 
@@ -124,7 +109,6 @@ def expand_graph_with_embeddings(
                     "similarities": [sim for _, sim in top_words]
                 }
             else:
-                # Si pas de vocabulaire, juste encoder le nœud
                 expanded_graph["expanded_nodes"][node] = {
                     "lexical_field": [],
                     "similarities": []
@@ -132,7 +116,6 @@ def expand_graph_with_embeddings(
     
     except Exception as e:
         print(f"Erreur lors de l'expansion du graphe: {e}")
-        # En cas d'erreur, retourner le graphe original
         return topic_graph.copy()
     
     return expanded_graph

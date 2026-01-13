@@ -18,7 +18,6 @@ def visualize_comparison(results: Dict[str, Any]):
     for idx, (poem, title) in enumerate(poems_data):
         ax = axes[idx // 2, idx % 2]
         
-        # Wrapper le texte avec une largeur appropriée
         wrapped_lines = []
         for line in poem.split("\n"):
             if len(line) > 70:
@@ -26,7 +25,6 @@ def visualize_comparison(results: Dict[str, Any]):
             else:
                 wrapped_lines.append(line)
         
-        # Limiter le nombre de lignes pour éviter la superposition (max ~30 lignes)
         max_lines = 30
         if len(wrapped_lines) > max_lines:
             wrapped_lines = wrapped_lines[:max_lines]
@@ -34,7 +32,6 @@ def visualize_comparison(results: Dict[str, Any]):
         
         wrapped_poem = "\n".join(wrapped_lines)
         
-        # Positionner le texte avec un espace pour le titre
         ax.text(0.02, 0.98, wrapped_poem, transform=ax.transAxes, 
                 fontsize=8, verticalalignment="top", horizontalalignment="left",
                 family="monospace",

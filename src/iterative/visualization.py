@@ -34,7 +34,6 @@ def visualize_iterative_results(results: Dict[str, Any], approach_name: str):
                                    and not any(keyword in line.lower() for keyword in ["voici", "version révisée", "points forts", "faiblesses"])])
             poem_clean = "\n".join([line for line in poem_clean.split("\n") if line.strip()])
             
-            # Wrapper le texte avec une largeur appropriée
             wrapped_lines = []
             for line in poem_clean.split("\n"):
                 if len(line) > 70:
@@ -42,7 +41,6 @@ def visualize_iterative_results(results: Dict[str, Any], approach_name: str):
                 else:
                     wrapped_lines.append(line)
             
-            # Limiter le nombre de lignes pour éviter la superposition (max ~30 lignes)
             max_lines = 30
             if len(wrapped_lines) > max_lines:
                 wrapped_lines = wrapped_lines[:max_lines]

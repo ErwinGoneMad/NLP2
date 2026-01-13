@@ -107,7 +107,6 @@ def compute_metrics(
     if not poem_text:
         return {}
     
-    # Métriques de base (toujours calculées)
     lines = [line.strip() for line in poem_text.split("\n") if line.strip()]
     words = poem_text.split()
     chars = len(poem_text)
@@ -121,27 +120,22 @@ def compute_metrics(
         "avg_line_length": sum(len(line) for line in lines) / len(lines) if lines else 0
     }
     
-    # Si topic_graph fourni, calculer les métriques avancées
     if topic_graph is not None:
         try:
             from src.metrics.advanced_metrics import compute_all_advanced_metrics
             
-            # Charger le modèle d'embeddings (singleton)
             from src.metrics.embeddings import load_embedding_model
             embedding_model = load_embedding_model()
             
-            # Calculer toutes les métriques avancées
             advanced_metrics = compute_all_advanced_metrics(
                 poem_text, 
                 topic_graph, 
                 embedding_model
             )
             
-            # Fusionner avec les métriques de base
             base_metrics.update(advanced_metrics)
         except Exception as e:
             print(f"Erreur lors du calcul des métriques avancées: {e}")
-            # En cas d'erreur, retourner seulement les métriques de base
     
     return base_metrics
 

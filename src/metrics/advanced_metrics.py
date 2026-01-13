@@ -26,12 +26,10 @@ def compute_perplexity(poem: str) -> float:
         
         model_name = "flaubert/flaubert_base_uncased"
         
-        # Charger le modèle et le tokenizer
         tokenizer = FlaubertTokenizer.from_pretrained(model_name, do_lowercase=True)
         model = FlaubertModel.from_pretrained(model_name)
         model.eval()
         
-        # Diviser le poème en phrases pour une meilleure évaluation
         sentences = [s.strip() for s in poem.replace('\n', ' ').split('.') if s.strip() and len(s.strip()) > 3]
         if not sentences:
             sentences = [poem]
@@ -40,7 +38,7 @@ def compute_perplexity(poem: str) -> float:
         count = 0
         
         with torch.no_grad():
-            for sentence in sentences[:10]:  # Limiter à 10 phrases pour la performance
+            for sentence in sentences[:10]:
                 try:
                     inputs = tokenizer(sentence, return_tensors="pt", truncation=True, max_length=128)
                     
@@ -50,8 +48,6 @@ def compute_perplexity(poem: str) -> float:
                     outputs = model(**inputs)
                     embeddings = outputs.last_hidden_state
                     
-                    # Calculer la cohérence sémantique
-                    # 1. Similarité moyenne entre tokens consécutifs
                     if embeddings.size(1) > 1:
                         consecutive_similarities = []
                         for i in range(embeddings.size(1) - 1):
@@ -64,14 +60,10 @@ def compute_perplexity(poem: str) -> float:
                         
                         avg_similarity = np.mean(consecutive_similarities) if consecutive_similarities else 0
                         
-                        # 2. Variance des embeddings (cohérence globale)
                         embedding_variance = torch.var(embeddings.view(-1)).item()
                         
-                        # Score de cohérence combiné
                         coherence = avg_similarity / (embedding_variance + 1e-6)
                         
-                        # Approximation de perplexité (inverse de la cohérence)
-                        # Normalisé pour être dans une plage raisonnable (10-1000)
                         perplexity_approx = 50 / (coherence + 0.1)
                         
                         total_score += perplexity_approx
@@ -110,7 +102,6 @@ def compute_lexical_diversity(poem: str) -> Dict[str, float]:
             "lexical_richness": 0.0,
         }
     
-    # Nettoyer et tokeniser les mots
     words = poem.split()
     cleaned_words = [
         word.lower().strip(".,!?;:()[]{}«»\"'") 
@@ -118,7 +109,6 @@ def compute_lexical_diversity(poem: str) -> Dict[str, float]:
         if word.strip()
     ]
     
-    # Filtrer les mots vides après nettoyage
     cleaned_words = [w for w in cleaned_words if w]
     
     if not cleaned_words:
@@ -131,7 +121,6 @@ def compute_lexical_diversity(poem: str) -> Dict[str, float]:
     word_count = len(cleaned_words)
     unique_words = len(set(cleaned_words))
     
-    # Calculer les métriques
     type_token_ratio = unique_words / word_count if word_count > 0 else 0.0
     unique_word_ratio = unique_words / word_count if word_count > 0 else 0.0
     lexical_richness = (unique_words / word_count * 100) if word_count > 0 else 0.0
@@ -153,15 +142,14 @@ def compute_all_advanced_metrics(
     
     Args:
         poem: Le texte du poème
-        topic_graph: Dictionnaire avec 'nodes' et 'edges' (optionnel)
-        embedding_model: Le modèle d'embeddings (optionnel)
+        topic_graph: Dictionnaire avec 'nodes' et 'edges'
+        embedding_model: Le modèle d'embeddings
     
     Returns:
-        Dictionnaire combinant toutes les métriques avancées
+        Dictionnaire avec toutes les métriques avancées
     """
     metrics = {}
     
-    # Métriques de diversité lexicale (toujours calculées)
     try:
         lexical_metrics = compute_lexical_diversity(poem)
         metrics.update(lexical_metrics)
@@ -173,7 +161,6 @@ def compute_all_advanced_metrics(
             "lexical_richness": 0.0,
         })
     
-    # Métriques de qualité linguistique (basée sur FlauBERT, toujours calculées)
     try:
         perplexity = compute_perplexity(poem)
         metrics["perplexity"] = perplexity
@@ -181,7 +168,6 @@ def compute_all_advanced_metrics(
         print(f"Erreur lors du calcul de la métrique de qualité linguistique: {e}")
         metrics["perplexity"] = 0.0
     
-    # Métriques d'embeddings (si topic_graph fourni)
     if topic_graph is not None:
         try:
             from .embeddings import compute_graph_similarity, compute_stanza_coherence

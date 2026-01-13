@@ -5,7 +5,6 @@ import numpy as np
 from sklearn.metrics.pairwise import cosine_similarity as sklearn_cosine_similarity
 
 
-# Singleton pour le modèle d'embeddings
 _embedding_model = None
 
 
@@ -24,7 +23,6 @@ def load_embedding_model():
     try:
         from sentence_transformers import SentenceTransformer
         
-        # Modèle français optimisé et léger
         model_name = "dangvantuan/sentence-camembert-base"
         _embedding_model = SentenceTransformer(model_name)
         return _embedding_model
@@ -39,7 +37,7 @@ def encode_text(text: str, embedding_model=None) -> Optional[np.ndarray]:
     
     Args:
         text: Le texte à encoder
-        embedding_model: Le modèle d'embeddings (optionnel, chargé automatiquement si None)
+        embedding_model: Le modèle d'embeddings
     
     Returns:
         Vecteur d'embeddings ou None si erreur
@@ -54,7 +52,6 @@ def encode_text(text: str, embedding_model=None) -> Optional[np.ndarray]:
         return None
     
     try:
-        # Normalisation automatique par sentence-transformers
         embedding = embedding_model.encode(text, normalize_embeddings=True)
         return embedding
     except Exception as e:
@@ -68,7 +65,7 @@ def encode_batch(texts: List[str], embedding_model=None) -> Optional[np.ndarray]
     
     Args:
         texts: Liste de textes à encoder
-        embedding_model: Le modèle d'embeddings (optionnel)
+        embedding_model: Le modèle d'embeddings
     
     Returns:
         Matrice d'embeddings (n_texts, embedding_dim) ou None si erreur
@@ -76,7 +73,6 @@ def encode_batch(texts: List[str], embedding_model=None) -> Optional[np.ndarray]
     if not texts:
         return None
     
-    # Filtrer les textes vides
     texts = [t for t in texts if t and t.strip()]
     if not texts:
         return None
@@ -110,8 +106,6 @@ def cosine_similarity(emb1: np.ndarray, emb2: np.ndarray) -> float:
         return 0.0
     
     try:
-        # Utiliser sklearn pour le calcul efficace
-        # Reshape pour avoir la bonne forme (1, n_features)
         emb1_reshaped = emb1.reshape(1, -1) if emb1.ndim == 1 else emb1
         emb2_reshaped = emb2.reshape(1, -1) if emb2.ndim == 1 else emb2
         
@@ -133,7 +127,7 @@ def compute_graph_similarity(
     Args:
         poem: Le texte du poème
         topic_graph: Dictionnaire avec 'nodes' (liste de thèmes) et 'edges' (liste de transitions)
-        embedding_model: Le modèle d'embeddings (optionnel)
+        embedding_model: Le modèle d'embeddings
     
     Returns:
         Dictionnaire avec les métriques de similarité :
@@ -170,7 +164,6 @@ def compute_graph_similarity(
             "graph_coverage": 0.0,
         }
     
-    # Encoder le poème
     poem_embedding = encode_text(poem, embedding_model)
     if poem_embedding is None:
         return {
@@ -180,7 +173,6 @@ def compute_graph_similarity(
             "graph_coverage": 0.0,
         }
     
-    # Encoder tous les nœuds du graphe
     node_embeddings = encode_batch(nodes, embedding_model)
     if node_embeddings is None:
         return {
@@ -190,7 +182,6 @@ def compute_graph_similarity(
             "graph_coverage": 0.0,
         }
     
-    # Calculer les similarités entre le poème et chaque nœud
     similarities = []
     for node_emb in node_embeddings:
         sim = cosine_similarity(poem_embedding, node_emb)
@@ -223,7 +214,7 @@ def compute_stanza_coherence(
     
     Args:
         poem: Le texte du poème
-        embedding_model: Le modèle d'embeddings (optionnel)
+        embedding_model: Le modèle d'embeddings
     
     Returns:
         Dictionnaire avec les métriques de cohérence :
@@ -248,10 +239,8 @@ def compute_stanza_coherence(
             "coherence_std": 0.0,
         }
     
-    # Découper le poème en strophes
     lines = [line.strip() for line in poem.split("\n")]
     
-    # Regrouper en strophes : par lignes vides ou par groupes de 4 lignes
     stanzas = []
     current_stanza = []
     
@@ -263,28 +252,23 @@ def compute_stanza_coherence(
         else:
             current_stanza.append(line)
     
-    # Ajouter la dernière strophe si elle existe
     if current_stanza:
         stanzas.append("\n".join(current_stanza))
     
-    # Si pas de strophes détectées (pas de lignes vides), essayer de regrouper par 4 lignes
     if len(stanzas) == 1 and len(lines) > 4:
-        # Regrouper par groupes de 4 lignes
         stanzas = []
         for i in range(0, len(lines), 4):
             stanza_lines = lines[i:i+4]
             if stanza_lines:
                 stanzas.append("\n".join(stanza_lines))
     
-    # Si toujours une seule strophe, retourner des métriques par défaut
     if len(stanzas) < 2:
         return {
-            "mean_consecutive_similarity": 1.0,  # Cohérence parfaite si une seule strophe
+            "mean_consecutive_similarity": 1.0,
             "overall_coherence": 1.0,
             "coherence_std": 0.0,
         }
     
-    # Encoder toutes les strophes
     stanza_embeddings = encode_batch(stanzas, embedding_model)
     if stanza_embeddings is None:
         return {
@@ -293,13 +277,11 @@ def compute_stanza_coherence(
             "coherence_std": 0.0,
         }
     
-    # Calculer les similarités entre strophes consécutives
     consecutive_similarities = []
     for i in range(len(stanzas) - 1):
         sim = cosine_similarity(stanza_embeddings[i], stanza_embeddings[i + 1])
         consecutive_similarities.append(sim)
     
-    # Calculer toutes les similarités entre paires de strophes
     all_similarities = []
     for i in range(len(stanzas)):
         for j in range(i + 1, len(stanzas)):
