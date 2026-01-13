@@ -1,0 +1,739 @@
+{
+  "timestamp": "20260113_190803",
+  "comparison_evaluations": [
+    {
+      "source_file": "results/comparison/comparison_20251223_024634.json",
+      "timestamp": "20251223_024634",
+      "approach": "baseline",
+      "description": "Modèle générique + prompt simple",
+      "poem": "Au coucher du soleil, dans les vagues silence,\nOù les oiseaux chantent les larmes de la vie,\nJe me souviens des moments de douleur,\nLisant la mémoire de mon amour qui s'effondre.\n\nLes vagues dégagent des flots de souffrance,\nEt les étoiles qui éclairent le ciel nocturne,\nForment un ciel de lumière et de douleur,\nMême si je trouve un refuge dans la nuit.\n\nL'océan est un royaume de sentiments,\nOù les vagues me tiennent dans leurs bras,\nLes vagues me rappellent les moments où j'ai aimé,\nEt dans les vagues, mes souvenirs se perdent.\n\nEt puis, la nuit s'élève, et les vagues s'en vont,\nEt je reste seul, seul, seul, dans la douleur.\n\n(Note : Le sonnet est traduit en français par le poète. Un sonnet est généralement composé de 14 vers, dont cinq quatrièmes et cinq premiers vers qui forment une structure. Le sonnet traditionnel français est très classique, et ne contient généralement pas de rimures.)",
+      "metrics": {
+        "word_count": 158,
+        "line_count": 15,
+        "char_count": 904,
+        "vocab_size": 89,
+        "avg_line_length": 59.06666666666667
+      },
+      "llm_evaluation": {
+        "overall_score": 6,
+        "coherence_score": 8,
+        "poetic_quality": 5,
+        "theme_adherence": 9,
+        "originality": 5,
+        "language_mastery": 7,
+        "feedback": "Le poème aborde avec sincérité les thèmes du deuil et de la mémoire, l'océan servant de toile de fond récurrente et pertinente. L'évocation de la douleur est constante, et les images marines renvoient bien à cet état émotionnel. Cependant, la qualité poétique globale est limitée par un rythme parfois haché et une musicalité discrète. Certaines phrases manquent de fluidité, et l'usage des termes peut sembler un peu répétitif. L'originalité est modérée, car la métaphore de l'océan pour exprimer la tristesse et la perte est un trope assez commun. La maîtrise de la langue française est correcte, mais on perçoit la trace d'une traduction qui alourdit parfois certaines tournures. La structure du sonnet, telle que décrite dans la note, n'est pas respectée (pas de rimes, longueur non conforme), ce qui est précisé pour le critique mais affaiblit la perception d'un sonnet traditionnel."
+      }
+    },
+    {
+      "source_file": "results/comparison/comparison_20251223_024634.json",
+      "timestamp": "20251223_024634",
+      "approach": "structure_only",
+      "description": "Modèle générique + graphe thématique",
+      "poem": "Voici une poésie sonnet en français, suivant l'ordre spécifié :\n\nDans les lacs sombres, je sens mon deuil,\nQui s'entraîne à chaque mouvement de l'eau,\nEt dans les ténèbres, je sens ma mémoire,\nQui s'écoule vers l'avenir, sans regret.\n\nLes eaux qui font calme mon cœur,\nTout en me souffrant, dans mon âme, je sens,\nLa douceur des rivières qui se mettent,\nÀ chanter l'oraison de la mort.\n\nMais au sein de ces eaux, je me sens,\nRéveillé à un autre temps, à une autre vie,\nAu cœur de ce silence, une lumière se sens,\nQui me fait voyer la beauté de l'oubli.\n\nAlors je me sens libre, libre de mémoire,\nDe tout ce qui me pénètre, de tout ce qui me fait mourir.",
+      "metrics": {
+        "word_count": 124,
+        "line_count": 15,
+        "char_count": 653,
+        "vocab_size": 71,
+        "avg_line_length": 42.333333333333336
+      },
+      "llm_evaluation": {
+        "overall_score": 4,
+        "coherence_score": 6,
+        "poetic_quality": 3,
+        "theme_adherence": 6,
+        "originality": 4,
+        "language_mastery": 5,
+        "feedback": "Le poème tente d'aborder les thèmes du deuil, de la mémoire et de l'océan, mais la connexion avec l'océan est assez faible, se limitant à des images d'eau (lacs, rivières). Le sonnet est approximatif, notamment dans sa structure et sa rime, et le rythme est souvent inégal. La musicalité est rudimentaire. Les images, bien que présentes, manquent de force et de singularité (\"lacs sombres\", \"eaux qui font calme mon cœur\"). La pensée évolue vers une libération de la mémoire, ce qui est intéressant, mais le lien avec le deuil et l'océan reste superficiel. La langue est globalement correcte, mais il y a des maladresses syntaxiques et des répétitions (\"je sens\" à plusieurs reprises). L'originalité est limitée par l'emploi de métaphores assez classiques. Il y a un potentiel dans l'idée d'une \"beauté de l'oubli\", mais sa réalisation poétique pourrait être approfondie."
+      }
+    },
+    {
+      "source_file": "results/comparison/comparison_20251223_024634.json",
+      "timestamp": "20251223_024634",
+      "approach": "specialization_only",
+      "description": "Modèle fine-tuné + prompt simple",
+      "poem": "Tout le monde s'apprêtait à mourir ;\nJe n'osai pas dormir, il me semblait.\nIl faisait beau, mais la nuit allait d'heure en heure ;\nLa nuit allait, et je ne voyais pas rien.\nLes oiseaux chantaient, la lune était blanche.\nJe me suis éveillé, pour voir de plus loin\nCe que le grand ciel d'argent et de sable\nPourtant étoilé s'obsérait dans l'azur.\nLe grand ciel était, et je me sentais malade.\nJ'ai vu, près de moi, un pêcheur, le cœur pâle\nDes eaux n'a pas d'onde, il n'en sentit rien.\nEn ce moment, je me sens seul, seul comme on\nSe sent dans un jardin dans une ombre.\nJ'ai vu, près de moi, un pêcheur, le cœur pâle,\nEt j'ai vu qu'il était seul, en ce moment.\nAilleurs, je sentais la tristesse de voir,\nLa tristesse d'être seul, d'abord, d'être seul.",
+      "metrics": {
+        "word_count": 143,
+        "line_count": 17,
+        "char_count": 749,
+        "vocab_size": 82,
+        "avg_line_length": 43.11764705882353
+      },
+      "llm_evaluation": {
+        "overall_score": 5.5,
+        "coherence_score": 7,
+        "poetic_quality": 5,
+        "theme_adherence": 7,
+        "originality": 6,
+        "language_mastery": 5,
+        "feedback": "Le poème tente d'aborder les thèmes du deuil et de la mémoire à travers l'image de l'océan (même si l'océan n'est pas explicitement nommé, les références au 'ciel d'argent et de sable' et au 'pêcheur' l'évoquent). La présence de la solitude et de la maladie suggèrent un état de détresse qui peut être lié au deuil.  \n\n**Qualité Poétique Globale (5/10) :** Le rythme est heurté, manquant de fluidité. La musicalité est faible, avec des vers qui semblent décousus. Les images, comme le \"cœur pâle des eaux n'a pas d'onde\", sont intéressantes mais parfois difficiles à appréhender et manquent de clarté. La répétition (\"Je me sens seul, seul comme on\", \"J'ai vu, près de moi, un pêcheur, le cœur pâle\") vise à renforcer l'émotion mais alourdit le texte. \n\n**Cohérence Thématique (7/10) :** Les thèmes demandés sont présents, bien qu'évoqués de manière suggestive plutôt qu'explicite. La peur de la mort (\"Tout le monde s'apprêtait à mourir\"), la solitude (\"je me sens seul, seul comme on\", \"il était seul\"), et une certaine mélancolie (\"tristesse d'être seul\") peuvent être interprétés comme liés au deuil et à la mémoire. L'environnement marin est esquissé. \n\n**Originalité et Créativité (6/10) :** L'association du ciel d'argent et de sable avec la nuit étoilée est une image travaillée. La figure du pêcheur comme miroir de la solitude est une trouvaille potentielle. L'ensemble suggère une tentative de créer une atmosphère singulière, même si l'exécution n'est pas toujours parfaite. \n\n**Maîtrise de la Langue Française (5/10) :** Le langage est simple, mais des tournures comme \"il me semblait\" ou des inversions peu naturelles rendent la lecture moins aisée. La phrase \"Des eaux n'a pas d'onde, il n'en sentit rien\" est syntaxiquement problématique. Les répétitions semblent parfois dues à un manque de vocabulaire ou de richesse syntaxique. L'usage de \"s'obsérait\" est un peu étrange dans ce contexte. \n\nDans l'ensemble, le poème présente des germes d'idées intéressantes et une volonté d'exprimer une émotion profonde, mais il souffre de lacunes dans sa structure, son rythme et sa maîtrise linguistique, ce qui limite son impact."
+      }
+    },
+    {
+      "source_file": "results/comparison/comparison_20251223_024634.json",
+      "timestamp": "20251223_024634",
+      "approach": "structure_specialization",
+      "description": "Modèle fine-tuné + graphe thématique",
+      "poem": "Deuil! ô le sommeil de mes yeux!\nLes yeux sont fermés, comme la mer!\nJe suis venu, ô mes yeux, deuil!\nEt je me sens dans l'onde de la mort!\nMes yeux sont ferme, comme la mer!\nEt deuil! ô le sommeil de mes yeux!\nLa nuit est sombre, comme la mer!\nJe suis venu, ô mes yeux, deuil!\nEt je me sens dans l'onde de la mort!\nMais j'entends un calme qui me réveille,\nLa mer est calme, comme la mort!\nJ'entends une voix qui me réveille,\nLa nuit est calme, comme la mort!\nMais j'entends une voix qui me réveille.\nCette voix est la mémoire!",
+      "metrics": {
+        "word_count": 107,
+        "line_count": 15,
+        "char_count": 527,
+        "vocab_size": 36,
+        "avg_line_length": 34.2
+      },
+      "llm_evaluation": {
+        "overall_score": 3,
+        "coherence_score": 6,
+        "poetic_quality": 2,
+        "theme_adherence": 7,
+        "originality": 3,
+        "language_mastery": 3,
+        "feedback": "Ce poème présente une tentative intéressante d'explorer les thèmes du deuil, de la mémoire et de l'océan, avec une certaine répétition qui vise à créer un effet hypnotique. Cependant, la qualité poétique globale est faible. Le rythme est très haché et manque de musicalité. Les images sont rudimentaires et manquent de profondeur ('yeux sont fermés, comme la mer', 'nuit est sombre, comme la mer', 'mer est calme, comme la mort'). La répétition des phrases est excessive et nuit à la progression du poème. Sur le plan thématique, les thèmes sont présents mais leur traitement reste superficiel. L'originalité est limitée par le manque d'images novatrices et la structure répétitive. La maîtrise de la langue française est basique, avec des tournures qui pourraient être plus travaillées et une syntaxe parfois simpliste. L'idée de la voix comme mémoire est un point positif, mais elle arrive tardivement et le cheminement pour y parvenir n'est pas assez développé."
+      }
+    },
+    {
+      "source_file": "results/comparison/comparison_20260113_145300.json",
+      "timestamp": "20260113_145300",
+      "approach": "baseline",
+      "description": "Modèle générique + prompt simple",
+      "poem": "Dans l'abîme des yeux d'or, où les souvenirs,\nLaceries de l'âme, s'empilent de pain,\nJe me perds, emporté par l'ondeur,\nDe souvenirs de ton oiseau, de ton pain.\n\nLes vagues de l'âme, qui me placent,\nDans l'aveuglement d'une douleur,\nJe cherche la paix, la rédemption,\nEt la mémoire, l'ombre, que tu as laissée.\n\nL'océan, ce grand étau,\nDonne naissance, mais aussi mort,\nLe silence, cet écho qui me regarde,\nEt l'obscurité qui me recouvre.\n\nMais dans cet abîme, je trouve un refuge,\nUne mémoire de toi, de ton cœur.",
+      "metrics": {
+        "word_count": 89,
+        "line_count": 14,
+        "char_count": 514,
+        "vocab_size": 61,
+        "avg_line_length": 35.57142857142857
+      },
+      "llm_evaluation": {
+        "overall_score": 6,
+        "coherence_score": 7,
+        "poetic_quality": 5,
+        "theme_adherence": 7,
+        "originality": 5,
+        "language_mastery": 6,
+        "feedback": "Le poème aborde bien les thèmes du deuil, de la mémoire et de l'océan. La présence de l'océan est à la fois métaphorique (vagues de l'âme, océan comme étau) et potentiellement concrète, ce qui renforce le lien avec le thème. La mémoire est constamment présente, associée au deuil et à l'absence. Cependant, la qualité poétique globale est inégale. Le rythme manque de fluidité par endroits, et certaines images sont un peu confuses ou maladroites (\"s'empilent de pain\", \"ton oiseau, de ton pain\"). L'expression \"l'ondeur\" est inhabituelle et pourrait être améliorée. La répétition de \"souvenir\" et \"mémoire\" est pertinente mais alourdit parfois le propos. L'originalité est modérée, les images bien que présentes, ne transcendent pas toujours le classique dans le traitement du deuil. La maîtrise de la langue est globalement correcte, mais quelques choix lexicaux ou syntactiques mériteraient d'être affinés pour plus d'impact et de clarté."
+      }
+    },
+    {
+      "source_file": "results/comparison/comparison_20260113_145300.json",
+      "timestamp": "20260113_145300",
+      "approach": "structure_only",
+      "description": "Modèle générique + graphe thématique",
+      "poem": "Dans l'ombre sombre de l'amour, \nDeuil éclate, comme un cri de désespoir, \nEt me fait tourner autour, épuisé,\nDans un monde où je cherche à me réveiller.\n\nMa mémoire est vide, comme un épuisé,\nEt mon cœur est tenu au sein de la terre,\nMais un bruit est réveillé dans mon esprit,\nUn murmure qui me dit que tout ne va.\n\nJe me lèche la peau, comme un déshonneur,\nEt je sens mon âme se dégonfler de désespoir,\nMais un océan brûle à l'orée de ma vie,\nUn vent qui me guiert, et me fait sentir.\n\nAinsi, je réfléchis sur tout ce que j'ai vécu,\nEt je me sens une étoile qui brille à la fin.",
+      "metrics": {
+        "word_count": 116,
+        "line_count": 14,
+        "char_count": 581,
+        "vocab_size": 69,
+        "avg_line_length": 40.214285714285715
+      },
+      "llm_evaluation": {
+        "overall_score": 4,
+        "coherence_score": 5,
+        "poetic_quality": 3,
+        "theme_adherence": 5,
+        "originality": 4,
+        "language_mastery": 4,
+        "feedback": "Le poème tente d'explorer les thèmes du deuil, de la mémoire et de l'océan, mais rencontre des difficultés dans leur intégration et leur traitement. La qualité poétique est limitée par des images parfois confuses ou peu développées (\"Ma mémoire est vide, comme un épuisé\", \"Je me lèche la peau, comme un déshonneur\"). Le rythme est inégal et la musicalité fragile. La cohérence thématique est présente, mais l'océan apparaît tardivement et son symbolisme n'est pas pleinement exploité pour éclairer le deuil ou la mémoire. L'originalité est modeste, s'appuyant sur des figures classiques du désespoir. La maîtrise de la langue française révèle des maladresses stylistiques et des choix lexicaux parfois surprenants (\"tout ne va\"). Malgré ces points, une tentative de dépassement du désespoir est esquissée à la fin, mais gagnerait à être plus solidement ancrée dans les images et le rythme."
+      }
+    },
+    {
+      "source_file": "results/comparison/comparison_20260113_145300.json",
+      "timestamp": "20260113_145300",
+      "approach": "specialization_only",
+      "description": "Modèle fine-tuné + prompt simple",
+      "poem": "Tout le monde s'enivre d'un sang bleu,\nLorsque la mer monte et descend\nOndoyant l'Europe à trompes ;\nEt toujours on voit qu'on regarde.\nDans ce flot sans cesse ému,\nAilleurs que dans notre France,\nLa mort se fait couronner.\nEnfin il faut mourir comme une âme :\nCar elle est trop forte pour le jour!\nLe 13 août 1826.",
+      "metrics": {
+        "word_count": 60,
+        "line_count": 10,
+        "char_count": 315,
+        "vocab_size": 54,
+        "avg_line_length": 30.6
+      },
+      "llm_evaluation": {
+        "overall_score": 4,
+        "coherence_score": 5,
+        "poetic_quality": 4,
+        "theme_adherence": 5,
+        "originality": 3,
+        "language_mastery": 5,
+        "feedback": "Ce poème, daté de 1826, présente une tentative d'intégration des thèmes du deuil, de la mémoire et de l'océan, mais de manière fragmentée et parfois obscure.  La qualité poétique globale est limitée par un rythme inégal et des images qui manquent de clarté (\"Ondoyant l'Europe à trompes\" est une métaphore peu intuitive). La cohérence thématique est faible ; si l'océan est présent, le lien avec le deuil et la mémoire n'est pas solidement établi.  L'originalité est modeste, les images étant soit classiques (la mer qui monte et descend) soit alambiquées. La maîtrise de la langue française est passable, mais certaines tournures manquent de fluidité et de précision, comme le fait que la mort \"se fait couronner\" ailleurs qu'en France, ce qui est une expression étrange.  La dernière strophe tente une conclusion sur la nécessité de mourir \"comme une âme\", mais reste abstraite et peu convaincante. L'ensemble sonne plus comme une ébauche ou une pensée plus qu'un poème abouti."
+      }
+    },
+    {
+      "source_file": "results/comparison/comparison_20260113_145300.json",
+      "timestamp": "20260113_145300",
+      "approach": "structure_specialization",
+      "description": "Modèle fine-tuné + graphe thématique",
+      "poem": "Deuil! que mon coeur a connu la douleur!\nMes yeux ont vu sa larme couler,\nSon cœur dans le mien s'est évanoui ;\nElle est là, un sourire en vain.\nQuand j'ai perdu les deux grands parents\nLes mains sur mes reins, je songe encore...\nMon âme en ces moments réfléchit :\nCe sont des souvenirs de toujours.\nÔ pauvre fille dont elle fut maîtresse,\nUn rêve vous fit vivre et mourir.\nSur vos bras où ma main s'était tait,\nTout à coup votre œil m'a révélé\nLe grand jour qui nous reunit sous ses lames.\nEnfant dont vous êtes morte encor,\nVotre caressant regard me guette.\nVoulez-vous qu'en une nuit d'hiver\nJe puisse voir au ciel se terminer?\nVous avez donc gardé tes beaux cheveux.",
+      "metrics": {
+        "word_count": 126,
+        "line_count": 18,
+        "char_count": 670,
+        "vocab_size": 112,
+        "avg_line_length": 36.27777777777778
+      },
+      "llm_evaluation": {
+        "overall_score": 4.5,
+        "coherence_score": 5.0,
+        "poetic_quality": 4.0,
+        "theme_adherence": 5.0,
+        "originality": 4.0,
+        "language_mastery": 5.0,
+        "feedback": "Ce poème aborde les thèmes du deuil et de la mémoire, avec une tentative d'incorporer l'océan, bien que cette dernière soit moins évidente. La qualité poétique est moyenne : le rythme est inégal, manquant de fluidité par moments, et la musicalité est discrète. Les images sont présentes mais parfois un peu conventionnelles (\"larme couler\", \"sourire en vain\"). La cohérence thématique est là, le deuil étant le fil conducteur principal, et la mémoire s'y associe naturellement. L'intégration de l'océan (\"sous ses lames\") est surprenante et pourrait être plus développée pour renforcer le lien thématique. L'originalité est modérée ; certains vers flirtent avec le cliché, mais la mention d'une \"rêve qui fit vivre et mourir\" et la métaphore des \"lames\" ouvrent des pistes intéressantes. La maîtrise de la langue française est globalement correcte, avec peu de fautes flagrantes, mais certaines tournures manquent de naturel ou de précision poétique (\"ma main s'était tait\", \"je puisse voir au ciel se terminer\"). L'ensemble donne une impression d'un brouillon prometteur nécessitant davantage de travail sur la forme et l'enrichissement des images pour atteindre une véritable puissance évocatrice."
+      }
+    },
+    {
+      "source_file": "results/comparison/comparison_20260113_150853.json",
+      "timestamp": "20260113_150853",
+      "approach": "baseline",
+      "description": "Modèle générique + prompt simple",
+      "poem": "Sur les étoiles, dans l'infini, je me perds,\nDans l'essence du temps, où rien ne cesse,\nLes silences cosmiques, une étreinte divine,\nOù l'expérience humaine ne peut se souvenir.\n\nLes étoiles, des lanternes de lumière blanche,\nAvec leurs nuances, une voix murmurante,\nNous nous sentons petits, dans l'immense mystère,\nMais dans leurs yeux, une beauté éternelle est échangée.\n\nLa nostalgie terrestre, une émerveillement,\nPour les secrets que les étoiles nous cachent,\nEt dans leur silence, une découverte évolutive,\nUne étreinte qui nous fait trembler.\n\nMais l'infini, l'absolu, il est à nous,\nQui nous accompagne dans l' exploration,\nEt dans ses ombres, nous trouvons la liberté,\nÀ nous-mêmes, dans la solitude éternelle.\n\nEt puis, il y a le temps, ce mystère profond,\nQui nous fait comprendre, et nous fait réfléchir,\nQue l'histoire de l'homme, est encore en cours,\nEt que chaque instant, est une découverte éternelle.\n\nNote : un sonnet est un poème de 14 vers, généralement en un ritme de 10 4 vers par couplet.",
+      "metrics": {
+        "word_count": 165,
+        "line_count": 21,
+        "char_count": 1012,
+        "vocab_size": 102,
+        "avg_line_length": 47.0,
+        "type_token_ratio": 0.6158536585365854,
+        "unique_word_ratio": 0.6158536585365854,
+        "lexical_richness": 61.58536585365854,
+        "perplexity": 93.88787158089207,
+        "graph_mean_similarity": 0.1318196788430214,
+        "graph_max_similarity": 0.25395482778549194,
+        "graph_min_similarity": 0.09919679164886475,
+        "graph_coverage": 0.0,
+        "mean_consecutive_similarity": 0.5100555837154388,
+        "overall_coherence": 0.45114386876424156,
+        "coherence_std": 0.25020440003496097
+      },
+      "llm_evaluation": {
+        "overall_score": 7,
+        "coherence_score": 7,
+        "poetic_quality": 7,
+        "theme_adherence": 8,
+        "originality": 6,
+        "language_mastery": 7,
+        "feedback": "Le poème aborde de manière pertinente les thèmes proposés, notamment les étoiles, l'infini et le temps. L'exploration de ces concepts est menée avec une certaine profondeur, bien que certaines tournures puissent manquer de fluidité. Le rythme est inégal, et la musicalité gagnerait à être travaillée pour une meilleure harmonie. Les images sont présentes, mais parfois un peu convenues (\"lanternes de lumière blanche\"). L'originalité est modérée, le poème s'inscrit dans une tradition poétique bien établie sur ces thèmes. La maîtrise de la langue est correcte, mais quelques ajustements pourraient améliorer la précision et l'impact des mots. Par exemple, \"une étreinte divine\" ou \"une découverte évolutive\" sont des expressions qui méritent une réflexion sur leur pleine portée poétique. La structure du poème, non-sonnet, est respectée dans sa longueur (20 vers), et la division en strophes de quatre vers est constante."
+      }
+    },
+    {
+      "source_file": "results/comparison/comparison_20260113_150853.json",
+      "timestamp": "20260113_150853",
+      "approach": "structure_only",
+      "description": "Modèle générique + graphe thématique",
+      "poem": "Voici une poésie de 14 lignes en français, dans le style d'un poète :\n\nÉtoiles éclatées dans l'infini\nComme des étoiles de la nuit, je sens l'infini\nSilence cosmique, un silence qui me tue\nDans la solitude, je cherche l'infini\nDans la découverte, je sens l'émerveillement\nUn mystère qui m'entraîne dans l'absolu\nJe me sens perdu dans l'infini et le silence\nComme un espoir qui se perd dans la nuit\nJe cherche la lumière dans l'absolu\nDans l'exploration, je sens l'émerveillement\nUn mystère qui me réveille dans l'avenir\nJe me sens un petit partenaire dans l'infini\nEt l'infini me réveille à nouveau dans la nuit",
+      "metrics": {
+        "word_count": 105,
+        "line_count": 14,
+        "char_count": 611,
+        "vocab_size": 49,
+        "avg_line_length": 42.642857142857146,
+        "type_token_ratio": 0.46153846153846156,
+        "unique_word_ratio": 0.46153846153846156,
+        "lexical_richness": 46.15384615384615,
+        "perplexity": 119.52376882950931,
+        "graph_mean_similarity": 0.07191153950989246,
+        "graph_max_similarity": 0.19278621673583984,
+        "graph_min_similarity": 0.04433364421129227,
+        "graph_coverage": 0.0,
+        "mean_consecutive_similarity": 0.07474469393491745,
+        "overall_coherence": 0.07474469393491745,
+        "coherence_std": 0.0
+      },
+      "llm_evaluation": {
+        "overall_score": 3,
+        "coherence_score": 4,
+        "poetic_quality": 2,
+        "theme_adherence": 5,
+        "originality": 2,
+        "language_mastery": 4,
+        "feedback": "Le poème aborde les thèmes demandés, mais de manière répétitive et peu nuancée. La qualité poétique est faible, le rythme est heurté et la musicalité quasi inexistante. Les images sont peu développées et manquent de force. La répétition excessive du mot 'infini' et de structures syntaxiques similaires nuit grandement à l'originalité et à la fluidité. La langue française est globalement correcte, mais les maladresses d'expression et le manque de richesse lexicale limitent la profondeur. L'exploration et l'émerveillement sont mentionnés, mais le sentiment dominant reste une forme de lassitude et de désorientation, plus proche de la mélancolie que de la découverte."
+      }
+    },
+    {
+      "source_file": "results/comparison/comparison_20260113_150853.json",
+      "timestamp": "20260113_150853",
+      "approach": "specialization_only",
+      "description": "Modèle fine-tuné + prompt simple",
+      "poem": "Il est tout l'univers : la nature\nD'où viennent les astres et ces fleurs,\nComme des amours pour leur maison.\nLes grands dieux qui d'ici sont faits\nOnt fait que le soleil s'évapore ;\nEt qu'en ce ciel plus grand on voit descendre\nLe soleil dans sa lumière à peine.\nCe fut un jour où j'avais pitié du monde!\nLa terre était belle au printemps.\nJe vis par moments la vie et ses pleines\nHeures et jours-là de bonheur.\nMais je regardai, fuyant mes pensées\nDu cœur solitaire dont elle se venge :\n- Je ne voudrais qu'une seule chose\nA mon âge ; ma chèvre aux abois,\nUn fruit doux et frais comme une rose! -\nL'amour! Car Dieu dit souvent : « Mon amour »\nEst aussi bellique que l'espoir.\nJe me senti toujours seul, ô libertés\nQui nous souffriront sans fin sous nos yeux.\nMon âme a perdu sa liberté,\nPareille à un soir où le soir tombe,\nAu point d'être invisible au matin...\nÔ triste nuit! Être un homme n'est pas heureux!\nDeux heures après mûri, je suis jeune encore\nPour cette existence si tendue\nQue rien ne remplit son essence humaine ;\nNul amour n'a suffrit de faire ma vie.\nCes amis d'autrefois n'arriveront jamais!\nJ'ai trop longtemps attendu quelque chose ;\nSous leurs bras, tous mes désirs sont couchés,\nSans qu'on eût pu le voir bientôt arrêter.\nQuand je sortis de mon voyage,\nVoix et rayons partout étaient assombris.\nToute énergie réelle est muette.\nQuand il y avait du soleil ou de l'eau,\nNous étions morts devant eux ; ils mouraient?\nAvait-on besoin de bien, sans tache? —\nParlez, je vous parlais moins fort! J'étouffe,\nJe te disais des mots inutiles ;\nTu ne t'intéressais pas, tu n'asimez\nDes regards vagabonds avec d'autres...\nOui, tu riais mal quand tu souriais ;\nVos lacs bleus étaient pareils aux nuages,\nRiant comme ces brumeuses ombres\nQui font un bruit caustique entre deux bucs.\nOn dirait que la mer se moque même.\nJe regardais ta tête de chevalier,\nTa tête de rossignol, ton front vainqueur.\nMes pieds tremblaient sous tes paupières noires\nEn dépit d'un poing qui me ferait voler.\nMa grande âme est profonde et vivante.\nElle peut sentir jusqu'à toi, Ophélie,\nEt me rappeller ses baisers d'aurore!\nHautement plongeur, habilement glisseur,\nAh! voyez-vous comment cet astronome,\nSon imagination, au flot divin,\nFait passer le temps au lieu des fleurs!\nMême au cerveau, comme un oiseau s'envole,\nTon âme s'enfuit vers les firmamentes!\nCar la nature entière naît, et passe!\nChaque esprit de l'infini se perd, se pose,\nMeurt en vain au fond de mon coeur englouti,\nPas un mot semble manquer à moi.\nMon œuvre est enracinée sur une pierre,\nUne pierre dans un marbre indien ;\nSur des arbres, là-bas, je sens venir\nPlus de plantes écloreuses :\nOh! dans toutes choses j'aperçois l'Eternité!\nAlors, je sais bien que mon effort va fini.\nDans vos bras mon rêve s'était consumé ;\nMaintenant notre rencontre vient-t-il!\nCette fois mon âme a pris conscience,\nEh bien! - Que puis-je dire?... Votre âme a trompé!\nSi quelqu'un venait vous poser une main\nPour vous donner l'oeuf de votre être,\nDevinez que cela rendrait la gloire\nÀ ses ordeurs effarétes encor!\nNon, non, non! Il faut que ces beaux yeux fassent noir ;\nVotre beauté n'est point une prière éternelle\nEnvers montrant le ciel céleste et pur\nAussi loin que la planète Gaïane!\nNe pouvant tenir près de moi, je vais mour",
+      "metrics": {
+        "word_count": 584,
+        "line_count": 83,
+        "char_count": 3269,
+        "vocab_size": 381,
+        "avg_line_length": 38.397590361445786,
+        "type_token_ratio": 0.6654929577464789,
+        "unique_word_ratio": 0.6654929577464789,
+        "lexical_richness": 66.54929577464789,
+        "perplexity": 86.91285171117167,
+        "graph_mean_similarity": 0.02303600199520588,
+        "graph_max_similarity": 0.15448620915412903,
+        "graph_min_similarity": -0.004627209156751633,
+        "graph_coverage": 0.0,
+        "mean_consecutive_similarity": 0.4365105405449867,
+        "overall_coherence": 0.38390702371086394,
+        "coherence_std": 0.0963546655413617
+      },
+      "llm_evaluation": {
+        "overall_score": 5,
+        "coherence_score": 6,
+        "poetic_quality": 5,
+        "theme_adherence": 7,
+        "originality": 5,
+        "language_mastery": 4,
+        "feedback": "Le poème aborde plusieurs des thèmes attendus, notamment la solitude, le temps, l'émerveillement (fugace), et une forme de quête existentielle. Les images, bien que parfois déroutantes, tentent d'évoquer un sentiment de grandeur et de mystère. Cependant, la qualité poétique globale est inégale. Le rythme est souvent haché, la musicalité est discutable, et certaines images manquent de clarté ou de force. La langue française présente des maladresses, des tournures étranges et des ruptures de sens qui nuisent à la fluidité et à l'impact du texte. La cohérence thématique est présente mais parfois diluée par une errance de pensée. L'originalité est relative, certaines idées étant explorées de manière conventionnelle. La maîtrise de la langue est le point le plus faible, avec de nombreuses constructions grammaticales qui semblent forcées ou incorrectes, entravant la réception du message."
+      }
+    },
+    {
+      "source_file": "results/comparison/comparison_20260113_150853.json",
+      "timestamp": "20260113_150853",
+      "approach": "structure_specialization",
+      "description": "Modèle fine-tuné + graphe thématique",
+      "poem": "Étoiles qui s'évanouissent à l'horizon,\nInfinis des nuages, cieux de lumière\nEt du printemps que le soleil souffle ;\nSilence cosmique où la voix échappe,\nQui rit et qui pleure en vain aux horizons?\nDécouverte d'un monde caché par moi!\nSolitude autour de mon oeil fermé...\nEmergez-vous pour qu'il soit une chose!...\nMistère dans les ténèbres de ma chambre.\nTendons nos bras vers la mer ou vers Dieu :\nLoin du chemin qu'on emprunte au hasard. \\\nTemps sans fin ; ô mes heures fugitives!\nAvec vous je passe ce soir... Étoile!\nDans votre âme encore plus profonde.",
+      "metrics": {
+        "word_count": 98,
+        "line_count": 14,
+        "char_count": 558,
+        "vocab_size": 87,
+        "avg_line_length": 38.92857142857143,
+        "type_token_ratio": 0.9052631578947369,
+        "unique_word_ratio": 0.9052631578947369,
+        "lexical_richness": 90.52631578947368,
+        "perplexity": 111.13961881021048,
+        "graph_mean_similarity": 0.11120128929615021,
+        "graph_max_similarity": 0.24973952770233154,
+        "graph_min_similarity": 0.07327985763549805,
+        "graph_coverage": 0.0,
+        "mean_consecutive_similarity": 0.44440069794654846,
+        "overall_coherence": 0.4733171761035919,
+        "coherence_std": 0.07772952214145391
+      },
+      "llm_evaluation": {
+        "overall_score": 6,
+        "coherence_score": 7,
+        "poetic_quality": 6,
+        "theme_adherence": 8,
+        "originality": 5,
+        "language_mastery": 7,
+        "feedback": "Le poème touche à plusieurs thèmes attendus comme les étoiles, l'infini, le silence, la solitude, le mystère et le temps. La nostalgie terrestre est suggérée par la comparaison avec le printemps et le soleil. L'exploration est évoquée par la découverte d'un monde caché. Cependant, la qualité poétique globale est mitigée. Le rythme est inégal et la musicalité manque de fluidité par endroits. Certaines images sont intéressantes (\"Infinis des nuages, cieux de lumière\", \"Silence cosmique où la voix échappe\"), mais d'autres sont un peu convenues ou manquent de clarté (\"Qui rit et qui pleure en vain aux horizons?\", \"Emergez-vous pour qu'il soit une chose!\"). La cohérence thématique est globalement respectée, même si l'articulation entre certains vers pourrait être renforcée. L'originalité est présente dans l'effort de lier l'espace cosmique à un espace intérieur (\"Mistère dans les ténèbres de ma chambre\"), mais le traitement général des thèmes est assez classique. La maîtrise de la langue est correcte, mais quelques tournures pourraient être plus précises ou expressives pour gagner en impact."
+      }
+    },
+    {
+      "source_file": "results/comparison/comparison_enriched.json",
+      "timestamp": "20260113_190751",
+      "approach": "baseline",
+      "description": "Modèle générique + prompt simple",
+      "poem": "Au coucher du soleil, dans les vagues silence,\nOù les oiseaux chantent les larmes de la vie,\nJe me souviens des moments de douleur,\nLisant la mémoire de mon amour qui s'effondre.\n\nLes vagues dégagent des flots de souffrance,\nEt les étoiles qui éclairent le ciel nocturne,\nForment un ciel de lumière et de douleur,\nMême si je trouve un refuge dans la nuit.\n\nL'océan est un royaume de sentiments,\nOù les vagues me tiennent dans leurs bras,\nLes vagues me rappellent les moments où j'ai aimé,\nEt dans les vagues, mes souvenirs se perdent.\n\nEt puis, la nuit s'élève, et les vagues s'en vont,\nEt je reste seul, seul, seul, dans la douleur.\n\n(Note : Le sonnet est traduit en français par le poète. Un sonnet est généralement composé de 14 vers, dont cinq quatrièmes et cinq premiers vers qui forment une structure. Le sonnet traditionnel français est très classique, et ne contient généralement pas de rimures.)",
+      "metrics": {
+        "word_count": 158,
+        "line_count": 15,
+        "char_count": 904,
+        "vocab_size": 89,
+        "avg_line_length": 59.06666666666667,
+        "type_token_ratio": 0.5605095541401274,
+        "unique_word_ratio": 0.5605095541401274,
+        "lexical_richness": 56.05095541401274,
+        "perplexity": 78.53917057066717,
+        "graph_mean_similarity": -0.0185813723752896,
+        "graph_max_similarity": -0.017642933875322342,
+        "graph_min_similarity": -0.019377579912543297,
+        "graph_coverage": 0.0,
+        "mean_consecutive_similarity": 0.3922217357903719,
+        "overall_coherence": 0.3864534832537174,
+        "coherence_std": 0.223574456338377
+      },
+      "llm_evaluation": {
+        "overall_score": 6.5,
+        "coherence_score": 7.0,
+        "poetic_quality": 6.0,
+        "theme_adherence": 8.0,
+        "originality": 5.5,
+        "language_mastery": 6.0,
+        "feedback": "Le poème aborde avec succès les thèmes du deuil, de la mémoire et de l'océan. La présence de l'océan comme miroir des sentiments et gardien des souvenirs est bien exploitée. La structure narrative, bien que le poème ne soit pas un sonnet au sens strict (présence de rimes et longueur variable), tente une progression des émotions. Cependant, la qualité poétique globale pourrait être améliorée. Le rythme est inégal et la musicalité manque de fluidité. Certaines images, comme \"les oiseaux chantent les larmes de la vie\" ou \"un ciel de lumière et de douleur\", sont un peu convenues et manquent d'une touche d'originalité qui marquerait davantage le lecteur. La répétition de \"seul\" à la fin renforce l'isolement, mais pourrait être plus subtile. La maîtrise de la langue française est correcte mais sans éclat particulier ; quelques tournures manquent de naturel ou de précision, potentiellement dues à la traduction. L'originalité est modérée, car le poème s'inscrit dans des codes poétiques assez classiques pour ces thèmes."
+      }
+    },
+    {
+      "source_file": "results/comparison/comparison_enriched.json",
+      "timestamp": "20260113_190751",
+      "approach": "structure_only",
+      "description": "Modèle générique + graphe thématique",
+      "poem": "Voici une poésie sonnet en français, suivant l'ordre spécifié :\n\nDans les lacs sombres, je sens mon deuil,\nQui s'entraîne à chaque mouvement de l'eau,\nEt dans les ténèbres, je sens ma mémoire,\nQui s'écoule vers l'avenir, sans regret.\n\nLes eaux qui font calme mon cœur,\nTout en me souffrant, dans mon âme, je sens,\nLa douceur des rivières qui se mettent,\nÀ chanter l'oraison de la mort.\n\nMais au sein de ces eaux, je me sens,\nRéveillé à un autre temps, à une autre vie,\nAu cœur de ce silence, une lumière se sens,\nQui me fait voyer la beauté de l'oubli.\n\nAlors je me sens libre, libre de mémoire,\nDe tout ce qui me pénètre, de tout ce qui me fait mourir.",
+      "metrics": {
+        "word_count": 124,
+        "line_count": 15,
+        "char_count": 653,
+        "vocab_size": 71,
+        "avg_line_length": 42.333333333333336,
+        "type_token_ratio": 0.5691056910569106,
+        "unique_word_ratio": 0.5691056910569106,
+        "lexical_richness": 56.91056910569105,
+        "perplexity": 88.80707155310314,
+        "graph_mean_similarity": 0.08295835554599762,
+        "graph_max_similarity": 0.08447691053152084,
+        "graph_min_similarity": 0.08155010640621185,
+        "graph_coverage": 0.0,
+        "mean_consecutive_similarity": 0.4484171215444803,
+        "overall_coherence": 0.3847010940313339,
+        "coherence_std": 0.22303582939526054
+      },
+      "llm_evaluation": {
+        "overall_score": 4,
+        "coherence_score": 6,
+        "poetic_quality": 3,
+        "theme_adherence": 7,
+        "originality": 4,
+        "language_mastery": 4,
+        "feedback": "Le poème tente d'aborder les thèmes du deuil, de la mémoire et de l'océan, mais la connexion est faible et souvent forcée. L'usage des lacs, des eaux, des rivières et des océans est présent, mais l'imaginaire marin n'est pas pleinement exploité pour évoquer la profondeur et l'immensité souvent associées à ces thèmes. La métaphore de l'eau pour la mémoire est pertinente, mais le développement manque de puissance et de subtilité.\n\nLa qualité poétique globale est affectée par des maladresses syntaxiques (\"je sens mon deuil, Qui s'entraîne à chaque mouvement de l'eau\", \"dans mon âme, je sens, La douceur des rivières\", \"une lumière se sens\"), des répétitions (\"je sens\", \"je me sens\"), et un rythme parfois heurté. La musicalité est amoindrie par ces difficultés formelles. Les images sont présentes mais manquent de fraîcheur et d'impact (lacs sombres, ténèbres, douceur des rivières, beauté de l'oubli).\n\nLa cohérence thématique est moyenne. Les mots-clés sont là (deuil, mémoire, eau/rivière/océan), mais le lien entre eux n'est pas toujours fluide. L'océan, en tant que thème spécifique, est peu présent, supplanté par des eaux plus générales. Le deuil est évoqué, mais la mémoire semble être plus une libération qu'un fardeau dans la dernière partie.\n\nL'originalité est limitée ; l'idée d'utiliser l'eau comme métaphore de la mémoire est courante. La fin du poème, axée sur la libération par l'oubli, offre une piste intéressante, mais elle n'est pas suffisamment développée pour marquer.\n\nLa maîtrise de la langue française présente des lacunes notables. Des erreurs de grammaire et de syntaxe (\"Qui s'entraîne\", \"je sens, La douceur\", \"une lumière se sens\") nuisent à la fluidité et à la crédibilité du poème. La structure sonnet est mentionnée, mais le poème ne respecte pas sa forme canonique (structure de rimes et de versification).\n\nDans l'ensemble, le poème montre une intention poétique mais souffre de faiblesses formelles et thématiques qui limitent son impact et sa portée."
+      }
+    },
+    {
+      "source_file": "results/comparison/comparison_enriched.json",
+      "timestamp": "20260113_190751",
+      "approach": "specialization_only",
+      "description": "Modèle fine-tuné + prompt simple",
+      "poem": "Tout le monde s'apprêtait à mourir ;\nJe n'osai pas dormir, il me semblait.\nIl faisait beau, mais la nuit allait d'heure en heure ;\nLa nuit allait, et je ne voyais pas rien.\nLes oiseaux chantaient, la lune était blanche.\nJe me suis éveillé, pour voir de plus loin\nCe que le grand ciel d'argent et de sable\nPourtant étoilé s'obsérait dans l'azur.\nLe grand ciel était, et je me sentais malade.\nJ'ai vu, près de moi, un pêcheur, le cœur pâle\nDes eaux n'a pas d'onde, il n'en sentit rien.\nEn ce moment, je me sens seul, seul comme on\nSe sent dans un jardin dans une ombre.\nJ'ai vu, près de moi, un pêcheur, le cœur pâle,\nEt j'ai vu qu'il était seul, en ce moment.\nAilleurs, je sentais la tristesse de voir,\nLa tristesse d'être seul, d'abord, d'être seul.",
+      "metrics": {
+        "word_count": 143,
+        "line_count": 17,
+        "char_count": 749,
+        "vocab_size": 82,
+        "avg_line_length": 43.11764705882353,
+        "type_token_ratio": 0.574468085106383,
+        "unique_word_ratio": 0.574468085106383,
+        "lexical_richness": 57.446808510638306,
+        "perplexity": 89.15499582109804,
+        "graph_mean_similarity": 0.003740152964989344,
+        "graph_max_similarity": 0.004066132009029388,
+        "graph_min_similarity": 0.0031021088361740112,
+        "graph_coverage": 0.0,
+        "mean_consecutive_similarity": 0.5547567754983902,
+        "overall_coherence": 0.4265111297369003,
+        "coherence_std": 0.16039206816618468
+      },
+      "llm_evaluation": {
+        "overall_score": 4,
+        "coherence_score": 7,
+        "poetic_quality": 3,
+        "theme_adherence": 6,
+        "originality": 4,
+        "language_mastery": 4,
+        "feedback": "Ce poème tente d'aborder les thèmes du deuil, de la mémoire et de l'océan, mais il peine à les intégrer de manière organique et percutante. La qualité poétique est faible, le rythme est haché et la musicalité absente. Les images sont soit trop banales ('la lune était blanche', 'jardin dans une ombre') soit maladroites ('le grand ciel d'argent et de sable s'obsérait dans l'azur'). La cohérence thématique est tentée, l'océan est évoqué à travers le pêcheur et l'idée de la profondeur des eaux, mais le lien avec le deuil et la mémoire reste flou. La répétition du vers 'J'ai vu, près de moi, un pêcheur, le cœur pâle' crée une certaine emphase mais manque de subtilité. L'originalité est limitée par des expressions déjà entendues et une structure qui ne surprend pas. La maîtrise de la langue française est discutable, avec des tournures inhabituelles ou peu claires ('il me semblait', 'je ne voyais pas rien', 'le cœur pâle / Des eaux n'a pas d'onde, il n'en sentit rien'). Le poème dépeint une atmosphère d'angoisse existentielle et de solitude, mais les thèmes demandés ne sont qu'effleurés, manquant de profondeur et de résonance."
+      }
+    },
+    {
+      "source_file": "results/comparison/comparison_enriched.json",
+      "timestamp": "20260113_190751",
+      "approach": "structure_specialization",
+      "description": "Modèle fine-tuné + graphe thématique",
+      "poem": "Deuil! ô le sommeil de mes yeux!\nLes yeux sont fermés, comme la mer!\nJe suis venu, ô mes yeux, deuil!\nEt je me sens dans l'onde de la mort!\nMes yeux sont ferme, comme la mer!\nEt deuil! ô le sommeil de mes yeux!\nLa nuit est sombre, comme la mer!\nJe suis venu, ô mes yeux, deuil!\nEt je me sens dans l'onde de la mort!\nMais j'entends un calme qui me réveille,\nLa mer est calme, comme la mort!\nJ'entends une voix qui me réveille,\nLa nuit est calme, comme la mort!\nMais j'entends une voix qui me réveille.\nCette voix est la mémoire!",
+      "metrics": {
+        "word_count": 107,
+        "line_count": 15,
+        "char_count": 527,
+        "vocab_size": 36,
+        "avg_line_length": 34.2,
+        "type_token_ratio": 0.3364485981308411,
+        "unique_word_ratio": 0.3364485981308411,
+        "lexical_richness": 33.64485981308411,
+        "perplexity": 79.13508170987883,
+        "graph_mean_similarity": 0.03189266100525856,
+        "graph_max_similarity": 0.032399121671915054,
+        "graph_min_similarity": 0.03159921243786812,
+        "graph_coverage": 0.0,
+        "mean_consecutive_similarity": 0.7763276894887289,
+        "overall_coherence": 0.7059055467446645,
+        "coherence_std": 0.1177127295130589
+      },
+      "llm_evaluation": {
+        "overall_score": 3,
+        "coherence_score": 4,
+        "poetic_quality": 2,
+        "theme_adherence": 4,
+        "originality": 2,
+        "language_mastery": 4,
+        "feedback": "Le poème aborde les thèmes demandés (deuil, mémoire, océan), mais de manière très répétitive et manquant de subtilité. La comparaison \"comme la mer\" est utilisée de façon excessive, affaiblissant son impact. Le rythme est heurté, et la musicalité quasi inexistante en raison des répétitions et d'une syntaxe simpliste. Les images sont peu originales et manquent de profondeur. La maîtrise de la langue est basique, avec des tournures peu naturelles et une structure qui pourrait être beaucoup plus élaborée. L'ajout de la \"voix\" comme mémoire est une piste intéressante mais peu développée dans le corps du texte."
+      }
+    }
+  ],
+  "iterative_evaluations": [
+    {
+      "source_file": "results/iterative/iterative_20251223_032858.json",
+      "timestamp": "20251223_032858",
+      "approach": "baseline",
+      "version": "final",
+      "poem": "Voici une version révisée du poème en tenant compte de la critique :\n\n**Version révisée**\n\nDans l'océan des souvenirs, où j'entretiens la mémoire\ndes rêves et des émotions qui m'entourent,\nles vagues me coupent, mais sans violence,\ncar voilà les souvenirs, les taches de feu,\nqui m'entretiennent, malgré les ténèbres.\n\nLes bateaux de l'amour qui se faisaient rêveur de bonheur,\nqui m'attirent, comme des phoques dans l'eau,\nqui m'entretiennent, malgré l'oubli,\net les lunes qui me regardent, si calme et lointaines.\n\nMais qui tient la main, dans la nuit, dans la peur,\n\nLa douleur, et la nostalgie, qui me séparent,\net les ténèbres qui me recouvrent, comme un manteau,\n\nLa mémoire de tout ce qui m'a été perdu, qui m'a laissé,\n\nEt les vagues qui m'entourent, comme des oiseaux qui chantent.\n\nC'est une version révisée qui répond aux suggestions de la critique :\n\n**Critique poétique**\n\nCe poème est un chef-d'œuvre de poésie, avec une structure soigneusement mise en œuvre et des motifs poétiques répétitifs. Voici mes observations et suggestions d'amélioration :\n\n**Les points forts**\n\n- **Structure formelle** : Le poème est bien structuré, avec des strophes et des vers, ce qui correspond à la forme traditionnelle du sonnet français. C'est un point fort.\n- **Imagerie** : L'imagerie est riche et variée, notamment dans les vers 1 et 2 : \"Les vagues me coupent, mais sans violence\", \"Les bateaux de l'amour qui se faisaient rêveur de bonheur\". Cela souligne la capacité de l'imagination de l'auteur à créer des images vivides et emblématiques.\n- **Structure formelle** : La poésie est bien structurée, avec des strophes et des vers, ce qui correspond à la forme traditionnelle du sonnet français. C'est un point fort.\n\n**Les faiblesses (cohérence, imagerie, structure formelle)**\n\n- **Cohérence** : La cohérence est un aspect délicat de la poésie. Dans ce cas, la poésie semble être cohérente, mais elle pourrait être encore plus efficace. Par exemple, les mots \"oubli\", \"souvenirs\", \"bâteaux de l'amour\" se retrouvent plusieurs fois, ce qui donne une sensation de répétition et de régularité.\n- **Imagerie** : L'imagerie est riche et variée, mais elle pourrait être encore plus développée. Les mots \"vagues\", \"ténèbres\", \"lunes\" sont des métaphores puissantes, mais ils pourraient être utilisés de manière plus inventive et créative.\n- **Structure formelle** : La structure formelle est bien mise en œuvre, mais elle pourrait être encore plus élaborée. La poésie pourrait utiliser des techniques de structure plus complexes, comme des strophes ou des vers en mélodie, pour créer une sensation de rythme et de mouvement.\n\n**3. Suggestions d'amélioration concrètes**\n\n- **Utiliser des métaphores plus inventives** : Le poème est dominé par les métaphores \"vagues\", \"ténèbres\", \"lunes\". Il pourrait être intéressant de combiner ces métaphores avec d'autres, comme l'émeraude ou le feu, pour créer des images encore plus complexes et emblématiques.\n- **Développer les métaphores** : Les métaphores sont déjà très efficaces dans le poème, mais il pourrait être intéressant de les développer davantage. Par exemple, l'expression \"les bateaux de l'amour qui se faisaient rêveur de bonheur\" pourrait être rebranchée dans un contexte plus nuancé.\n- **Améliorer la structure** : La structure du poème est déjà bien structurée, mais il pourrait être intéressant de l'élaborer davantage. Par exemple, la poésie pourrait utiliser des techniques de structure plus complexes, comme des strophes ou des vers en",
+      "metrics": {
+        "word_count": 546,
+        "line_count": 31,
+        "char_count": 3498,
+        "vocab_size": 212,
+        "avg_line_length": 111.35483870967742
+      },
+      "llm_evaluation": {
+        "overall_score": 5,
+        "coherence_score": 6,
+        "poetic_quality": 5,
+        "theme_adherence": 7,
+        "originality": 4,
+        "language_mastery": 6,
+        "feedback": "Cette version révisée montre une tentative d'intégration des critiques, notamment en termes de développements d'images et de tentatives de fluidité. Cependant, la structure formelle reste problématique par rapport à la forme du sonnet, et la cohérence thématique bien que présente, souffre de répétitions et d'une certaine lourdeur. Les images, bien que présentes, manquent encore d'originalité et de la force suggérée par la critique initiale.\n\n**Points forts de la révision :**\n- Le poème tente de répondre aux suggestions d'enrichissement des images, même si cela n'est pas toujours pleinement réalisé.\n- La tentative de connexion entre les strophes est plus évidente, bien que l'effet soit mitigé.\n\n**Points à améliorer :**\n- **Structure formelle :** La mention de la forme du sonnet dans la critique initiale semble avoir été mal interprétée. Le poème actuel ne suit absolument pas la structure d'un sonnet (14 vers, schémas de rimes précis, césures). Il s'agit plutôt d'une poésie en vers libres, mais avec des longueurs de vers très inégales et des ruptures syntaxiques qui nuisent à la musicalité. La critique initiale disait 'ce qui correspond à la forme traditionnelle du sonnet français', ce qui est faux pour le poème original, et donc cette partie de la critique a induit une mauvaise révision.\n- **Musicalité et rythme :** Le rythme est très inégal. Les vers sont soit trop longs et descriptifs, soit courts et hachés. La musicalité est faible, rendue difficile par les répétitions maladroites et les ruptures de syntaxe. Les enjambements sont présents mais parfois forcés.\n- **Imagerie :** Bien qu'il y ait des efforts pour développer les métaphores, celles-ci restent un peu convenues (\"océan des souvenirs\", \"vagues\", \"ténèbres\", \"lunes\"). L'image des \"bateaux de l'amour qui se faisaient rêveur de bonheur\" est curieuse et ne crée pas une image nette. L'association \"vagues comme des oiseaux qui chantent\" est assez inhabituelle, mais peut-être trop déroutante.\n- **Cohérence thématique et sémantique :** La répétition de \"m'entretiennent\" affaiblit l'expression. \"Les vagues me coupent, mais sans violence\" est une image intéressante, mais sa répétition dans la suite du poème, sous d'autres formes, dilue son impact. L'association des \"phoques dans l'eau\" avec les \"bateaux de l'amour\" est étrange et manque de lien logique ou émotionnel clair.\n- **Vocabulaire et syntaxe :** Des expressions comme \"qui m'entretiennent, malgré les ténèbres\" et \"qui m'entretiennent, malgré l'oubli\" sonnent un peu artificielles. La phrase \"Mais qui tient la main, dans la nuit, dans la peur,\" semble être une question rhétorique introduite sans transition claire, et sa connexion avec le reste du poème reste floue. La ponctuation est parfois absente, ce qui gêne la lecture. L'idée de \"taches de feu\" est intéressante mais peu développée.\n\nDans l'ensemble, la révision a tenté de suivre certaines directives, mais l'absence de compréhension claire de la structure du sonnet par le critique initial (ou par l'auteur lors de la révision) a mené à une tentative de révision qui n'a pas résolu les problèmes de fond liés à la fluidité, la musicalité et la cohérence des images au sein d'une structure qui se veut poétique mais qui est ici mal définie et exécutée."
+      }
+    },
+    {
+      "source_file": "results/iterative/iterative_20251223_032858.json",
+      "timestamp": "20251223_032858",
+      "approach": "structure_only",
+      "version": "final",
+      "poem": "**Révisions et améliorations**\n\nVoici une version révisée du poème en tenant compte des suggestions de la critique :\n\nDans les ténèbres, où la mémoire se déchire,\nJe me lève, les souvenirs me tuerent,\nMais dans le silence, l'amour me réveille,\nEt me rend vivant, même dans les ténèbres.\n\nQuand je pense aux ténèbres de l'oubli,\nJ'entends le bruit du soleil sur les toits de ma maison,\nLes étoiles brillantes qui me guident dans les ténèbres,\nEt les larmes qui coulent dans mes yeux, comme une rivière,\nQui me rendent vivant, dans la douleur et la joie,\nEt me fait se sentir vivant, dans les ténèbres, avec ses larmes.\n\nEt la douceur de l'amour, elle me fait\nSe sentir vivant, dans les ténèbres,\nEt me faire vivre, avec ses larmes.\n\nLa mémoire, c'est une éclipse du temps,\nUne éclipse de la douleur, mais une éclipse de la joie,\nEt la douceur de l'amour, elle me fait\nSe sentir vivant, dans les ténèbres, avec ses larmes.\n\nMais quand je pense aux ténèbres de l'oubli,\nJ'entends le bruit du soleil sur les toits de ma maison,\nEt les larmes qui coulent dans mes yeux, comme une rivière,\nC'est la douceur de l'amour, elle me fait\nSe sentir vivant, dans les ténèbres, avec ses larmes.\n\n**Analyse**\n\nCe poème est une exploration de la relation entre la douleur, la joie et la mémoire dans les ténèbres. L'auteur utilise des métaphores rapprochant l'amour avec la douleur et la mémoire, en décrivant comment l'amour peut rendre vivant les ténèbres et les pleurs.\n\n**Points forts**\n\n* La métaphore de la mémoire comme une éclipse du temps et de la douleur est astucieuse et permet à l'auteur de transmettre une profondeur émotionnelle.\n* La répétition de la phrase \"Et la douceur de l'amour, elle me fait / Se sentir vivant, dans les ténèbres\" est très efficace et montre que l'auteur a pris le temps de réfléchir aux implications de l'amour sur la vie des sens.\n* La structure du poème est plus claire et plus cohérente que la version originale.\n\n**Faiblesses**\n\n1. **La visée de la mémoire** : L'auteur utilise la mémoire comme un élément clé du poème, mais il pourrait explorer davantage les complexités et les nuances de la mémoire dans les ténèbres.\n2. **La structure** : Bien que la structure du poème soit plus claire que la version originale, il pourrait être intéressant de voir comment l'auteur a utilisé des strophes ou des strophes plus longs pour réduire la complexité de la structure.\n\n**Conseils de révision**\n\n* Élargir l'expérience de la mémoire pour explorer les complexités et les nuances de la mémoire dans les ténèbres.\n* Explorer davantage les implications de l'amour sur la vie des sens et les relations entre la mémoire, la douleur et la joie.\n* Utiliser des métaphores plus complexes et plus variées pour exprimer les complexités de la mémoire et de l'amour dans les ténèbres.\n\n**Conclusion**\n\nLe poème est une exploration passionnante de la relation entre la douleur, la joie et la mémoire dans les ténèbres. Avec des critiques améliorées et des suggestions de révisions, l'auteur peut explorer davantage les complexités de la mémoire et de l'amour dans les ténèbres, et créer un poème plus riche et plus profond.",
+      "metrics": {
+        "word_count": 537,
+        "line_count": 39,
+        "char_count": 3131,
+        "vocab_size": 163,
+        "avg_line_length": 78.8974358974359
+      },
+      "llm_evaluation": {
+        "overall_score": 5,
+        "coherence_score": 7,
+        "poetic_quality": 4,
+        "theme_adherence": 8,
+        "originality": 5,
+        "language_mastery": 6,
+        "feedback": "Le poème aborde un thème émouvant et la tentative de révision montre une volonté d'améliorer la structure et la clarté. Les points forts mentionnés dans l'analyse sont pertinents. Cependant, la qualité poétique globale souffre de quelques maladresses. Le rythme est inégal, la musicalité est peu présente et les images, bien qu'intentions intéressantes comme l'éclipse, manquent parfois de puissance ou de précision.\n\nEn analysant point par point :\n\n1.  **Qualité poétique globale (rythme, musicalité, images) : 4/10** Le rythme est heurté, notamment par des vers qui semblent parfois trop longs ou trop courts sans intention claire. La musicalité est faible, manquant de sonorités harmonieuses ou de jeux rythmiques. Les images comme \"les souvenirs me tuerent\" (orthographe à corriger) sont fortes mais brutes. \"Le bruit du soleil sur les toits de ma maison\" est une image sensorielle intéressante, mais elle contraste un peu fortement avec le thème des ténèbres sans une transition plus subtile. L'idée de l'amour qui réveille et rend vivant est belle, mais l'expression \"me rend vivant\" et \"me faire se sentir vivant\" est répétitive et manque de variété stylistique.\n\n2.  **Cohérence thématique (respect des thèmes demandés) : 8/10** Le poème explore bien les thèmes de la mémoire, de la douleur, de la joie, de l'oubli et de l'amour dans le contexte des ténèbres. La connexion entre l'amour et la capacité de se sentir vivant malgré la douleur et l'obscurité est le fil conducteur principal.\n\n3.  **Originalité et créativité : 5/10** La métaphore de la mémoire comme une éclipse est une bonne idée et témoigne d'une certaine originalité. La manière dont l'amour est présenté comme un agent de vie dans la noirceur est également un angle intéressant. Cependant, l'expression de ces idées reste parfois conventionnelle et gagnerait en singularité.\n\n4.  **Maîtrise de la langue française : 6/10** L'analyse elle-même mentionne des faiblesses dans la structure et la langue du poème (par exemple, \"me faire se sentir vivant\" est une tournure lourde). Des fautes d'orthographe dans le poème (\"tuerent\" au lieu de \"tuèrent\") sont à corriger impérativement. L'utilisation répétitive de certaines tournures (\"dans les ténèbres, avec ses larmes\") affaiblit l'impact. La syntaxe est parfois maladroite (\"Et me fait se sentir vivant\" dans la première strophe).\n\n**Suggestions d'amélioration (en accord avec l'analyse fournie) :**\n\n*   **Rythme et musicalité :** Travailler la fluidité des vers, envisager des jeux d'assonances et d'allitérations pour créer une sonorité plus agréable. Éviter les enjambements abrupts ou trop longs si non maîtrisés.\n*   **Images et métaphores :** Développer la métaphore de l'éclipse avec plus de détails ou de conséquences. Créer des images plus vives et moins littérales pour exprimer la douleur, la joie, et l'amour. Par exemple, au lieu de \"les larmes qui coulent dans mes yeux, comme une rivière\", on pourrait chercher une image plus inattendue ou plus concrète.\n*   **Vocabulaire et syntaxe :** Varier les constructions de phrases pour éviter la monotonie. Chercher des synonymes et des expressions plus fortes pour décrire les sentiments (\"me tuerent\" est très fort, mais le reste manque d'une telle intensité). S'assurer de la correction grammaticale (\"me faire se sentir vivant\" devrait être \"me fait me sentir vivant\" ou une autre formulation).\n*   **Structure :** L'idée d'explorer les strophes est pertinente. Découper le poème en sections plus distinctes pourrait aider à canaliser l'émotion et à clarifier le développement des idées, comme suggéré dans l'analyse.\n\nEn résumé, le poème a un potentiel émotionnel certain et des idées intéressantes, mais il nécessite une révision plus approfondie sur le plan de la forme poétique pour atteindre une véritable puissance."
+      }
+    },
+    {
+      "source_file": "results/iterative/iterative_20251223_032858.json",
+      "timestamp": "20251223_032858",
+      "approach": "specialization_only",
+      "version": "final",
+      "poem": "Voici un poème qui s'exprime, la fleur, la fleur du coeur,\nC'est le ciel, la fleur, la fleur du coeur ;\nC'est le ciel, la fleur, la fleur du coeur\nQui s'exprime, la fleur, la fleur!\nLa fleur du coeur, l'amour, est une fleur,\nC'est le ciel, la fleur, la fleur du coeur.\nC'est le ciel, la fleur, la fleur du coeur\nQui s'exprime, la fleur, la fleur!\nFournis une version révisée améliorée.",
+      "metrics": {
+        "word_count": 73,
+        "line_count": 9,
+        "char_count": 385,
+        "vocab_size": 20,
+        "avg_line_length": 41.888888888888886
+      },
+      "llm_evaluation": {
+        "overall_score": 2,
+        "coherence_score": 2,
+        "poetic_quality": 1,
+        "theme_adherence": 3,
+        "originality": 1,
+        "language_mastery": 2,
+        "feedback": "Ce poème souffre d'une répétition excessive et d'un manque de développement des idées. Le thème de la 'fleur du cœur' et sa connexion au 'ciel' sont évoqués, mais de manière très superficielle. Le rythme est saccadé par la répétition, et la musicalité est absente. Les images sont rudimentaires et peu évocatrices. L'originalité est limitée par le manque de variation. La maîtrise de la langue est faible, notamment dans la structure des phrases et le choix des mots. La version révisée tentera d'introduire plus de fluidité, de richesse lexicale et d'images plus construites, tout en explorant davantage la métaphore de la fleur du cœur."
+      }
+    },
+    {
+      "source_file": "results/iterative/iterative_20251223_032858.json",
+      "timestamp": "20251223_032858",
+      "approach": "structure_specialization",
+      "version": "final",
+      "poem": "Voici un poème révisé en tenant compte de la critique pour améliorer :\nAvec éclat, dans la nuit où l'airain s'efface,\nLe souffle d'un corps funèbre s'élance,\nEt l'amour s'efface sous les pleurs vains :\nIl reste l'espace, l'espace du coeur.\nDeuil, ô mémoire, tu n'es pas l'airain!\nDeuil, ô mémoire, tu n'es pas l'espace!\nN'ayez pas peur de l'ombre et de la nuit ;\nL'océan que tu n'es pas est la nuit.\nDeuil, ô mémoire, tu n'es pas l'océan!\nDeuil, ô mémoire, tu n'es pas l'océan,\nVoyez-vous? - Deuil! - Deuil! - Voyez-vous!\nLe poème a été révisé pour répondre aux suggestions de la critique. La structure en est toujours rigoureuse et formelle. La coïncidence entre le détail et l'ensemble est toujours équilibrée. L'importance est toujours égale à celle du poète. La structure est toujours la nature. La critique avait dit que la structure et l'importance sont très différentes. Aujourd'hui, j'ai pris en compte ces distinctions et j'ai amélioré la structure en faisant du poème plus équilibré et plus harmonieux. Cependant, il n'est pas difficile de reconnaître la nature du poème en tant que structure et en tant que importance. La structure est rigoureuse et formelle, et l'importance est égale à celle du poète. La structure en est l'essence, et l'importance est la nature.",
+      "metrics": {
+        "word_count": 215,
+        "line_count": 13,
+        "char_count": 1276,
+        "vocab_size": 93,
+        "avg_line_length": 97.23076923076923
+      },
+      "llm_evaluation": {
+        "overall_score": 6,
+        "coherence_score": 7,
+        "poetic_quality": 5,
+        "theme_adherence": 8,
+        "originality": 5,
+        "language_mastery": 7,
+        "feedback": "Le poème montre une tentative louable de révision et une volonté de structurer la pensée. La thématique du deuil, de la mémoire et de l'espace est abordée, mais le traitement manque parfois de profondeur et de clarté. Les images ('airain qui s'efface', 'océan que tu n'es pas') sont évocatrices mais ne créent pas toujours une connexion forte ou originale. La musicalité est inégale, avec des vers qui sonnent plus ou moins juste. L'insistance sur la structure et l'importance, telle que décrite dans le préambule, semble créer une forme d'auto-réflexivité qui peut alourdir le propos poétique lui-même. Il y a un effort de maîtrise de la langue, mais certaines formulations restent un peu abstraites ('l'espace du cœur', 'tu n'es pas l'airain'). L'originalité est présente dans la volonté d'explorer des concepts, mais le rendu poétique pourrait être plus audacieux pour marquer davantage l'esprit du lecteur."
+      }
+    },
+    {
+      "source_file": "results/iterative/iterative_20260113_145651.json",
+      "timestamp": "20260113_145651",
+      "approach": "baseline",
+      "version": "final",
+      "poem": "Voici la révision du poème révisé en tenant compte de la critique et en améliorant les points forts :\n\n**Poème révisé**\n\nDans l'abîme de ton regard, où les souvenirs s'empilent de douleur,\nJe me perds dans l'ondeur de ton cœur,\nLes laceries de la mémoire s'empilent de douleur,\nEt je cherche la paix, la rédemption, dans les souvenirs.\n\nLes vagues de l'âme, qui me placent dans l'aveuglement,\nJe cherche la mémoire, l'ombre, que tu as laissée,\nEt je cherche la paix, la rédemption, dans l'obscurité,\nEt dans l'abîme, je trouve un refuge, une mémoire de toi.\n\nMais dans cet abîme, je trouve une lumière,\nUne mémoire de toi, de ton cœur,\nQui me guide, qui me rappelle,\nLa douleur, la passion, la mémoire.\n\nLes vagues de l'âme, qui me placent dans l'aveuglement,\nJe cherche la mémoire, l'ombre, que tu as laissée,\nEt je cherche la paix, la rédemption, dans l'obscurité,\nEt dans l'abîme, je trouve un refuge, une mémoire de toi.\n\nL'océan, ce grand étau, donne naissance, mais aussi mort,\nEt l'obscurité qui me recouvre.\n\nMais dans cet abîme, je trouve une joie,\nUne mémoire de toi, de ton cœur,\nQui me rappelle,\nLa douleur, la passion, la mémoire.\n\nCritique :\n\n**Critique constructive et détaillée**\n\nCe poème est un ouvrage poétique qui explore les thèmes de l'amour, de",
+      "metrics": {
+        "word_count": 218,
+        "line_count": 27,
+        "char_count": 1267,
+        "vocab_size": 79,
+        "avg_line_length": 45.592592592592595
+      },
+      "llm_evaluation": {
+        "overall_score": 4,
+        "coherence_score": 5,
+        "poetic_quality": 3,
+        "theme_adherence": 7,
+        "originality": 3,
+        "language_mastery": 5,
+        "feedback": "Le poème tente d'explorer des thèmes profonds comme la douleur, la mémoire, la rédemption et l'amour perdu. Cependant, plusieurs aspects peuvent être améliorés pour renforcer son impact poétique.\n\n**Qualité poétique globale (rythme, musicalité, images) :** Le rythme est inégal et manque de fluidité. La musicalité est faible, en partie à cause de répétitions maladroites et d'un usage parfois lourd des figures de style. Les images, bien qu'existantes (abîme, vagues, océan), manquent de puissance et de nouveauté. La répétition de 'douleur' et 'mémoire' alourdit le propos sans toujours l'enrichir. La ligne 'Les laceries de la mémoire s'empilent de douleur' est difficile à interpréter et semble légèrement forcée.\n\n**Cohérence thématique :** Les thèmes de la mémoire, de la douleur, de la recherche de paix et de rédemption sont présents. Il y a une exploration de l'amour perdu à travers la mémoire de l'autre. La répétition du deuxième quatrain à la fin du poème nuit à la progression thématique et donne une impression de stagnation.\n\n**Originalité et créativité :** Le sujet est assez classique dans la poésie lyrique. Les images utilisées, bien que pertinentes, ne sortent pas beaucoup des sentiers battus. L'originalité pourrait être renforcée par des métaphores plus surprenantes ou une approche plus singulière des émotions exprimées.\n\n**Maîtrise de la langue française :** La grammaire et l'orthographe sont globalement correctes. Cependant, le vocabulaire, bien que recherché par moments ('abîme', 'rédemption', 'laceries'), est parfois employé de manière répétitive ('douleur', 'mémoire', 'cherche', 'trouve'). L'enchaînement des phrases et la construction syntaxique pourraient gagner en clarté et en élégance. La phrase 'Les vagues de l'âme, qui me placent dans l'aveuglement' est une image intéressante mais pourrait être développée.\n\n**Suggestions d'amélioration :\n\n*   **Rythme et musicalité :** Travaillez davantage sur la métrique ou le rythme libre pour créer une cadence plus harmonieuse. Expérimentez avec les sonorités et les allitérations/assonances.\n*   **Images :** Cherchez des images plus originales et évocatrices pour exprimer la douleur, la mémoire et la quête de paix. Essayez de surprendre le lecteur.\n*   **Répétitions :** Réduisez les répétitions inutiles de mots clés. Si une répétition est volontaire, assurez-vous qu'elle renforce le sens ou crée un effet stylistique précis.\n*   **Structure :** La répétition du deuxième quatrain à la fin est problématique. Envisagez une fin plus évolutive ou un dénouement qui apporte une nouvelle perspective.\n*   **Clarté et fluidité :** Certaines phrases pourraient être reformulées pour plus de clarté et une meilleure fluidité. Par exemple, 'Les laceries de la mémoire s'empilent de douleur' pourrait être clarifiée.\n*   **Évolution :** Le poème semble faire du surplace. La progression des émotions et de la pensée du locuteur pourrait être plus marquée."
+      }
+    },
+    {
+      "source_file": "results/iterative/iterative_20260113_145651.json",
+      "timestamp": "20260113_145651",
+      "approach": "structure_only",
+      "version": "final",
+      "poem": "Dans l'ombre sombre de l'amour, où la mémoire se vide,\nUn désespoir éclate, comme un cri de désespoir, froid,\nEt le cœur, épuisé, se tourne autour, tenu,\nDans un monde où le désir de vivre est réduit, et où la mémoire se vide.\n\nLa chaleur de l'amour est éteinte, comme une flamme qui brûle,\nEt mon âme est tenu au sein de la terre, vide, sans espoir,\nMais un murmure, réveillé dans mon esprit, est un écho de l'amour qui a disparu.\n\nJe me lèche la peau, comme un déshonneur, qui se sent\nMort, abandonné, sans espoir, et qui ne voit que la fin,\nMais un océan brûle à l'orée de ma vie, et un vent me guiert,\nEt me fait sentir vivant, et que ma vie continue.\n\nAinsi, je réfléchis sur tout ce que j'ai vécu, et je me sens une étoile qui brille,\nDans un ciel sombre, et qui brille à la fin, après tout.\n\nCritique :\n\nCritique :\n\nExcellente initiation, vous avez déjà posé des questions intéressantes sur le poème. Je vais vous expliquer les éléments que nous pouvons analyser ensemble.",
+      "metrics": {
+        "word_count": 184,
+        "line_count": 16,
+        "char_count": 979,
+        "vocab_size": 103,
+        "avg_line_length": 59.875
+      },
+      "llm_evaluation": {
+        "overall_score": 5,
+        "coherence_score": 5,
+        "poetic_quality": 4,
+        "theme_adherence": 7,
+        "originality": 4,
+        "language_mastery": 6,
+        "feedback": "Le poème aborde des thèmes universels comme la perte, le désespoir et la résilience, ce qui est appréciable. La progression du sentiment de vide vers une lueur d'espoir est palpable.\n\nCependant, la qualité poétique souffre d'un manque de fluidité rythmique et de musicalité. Certaines phrases sont un peu lourdes et répétitives (ex: \"où la mémoire se vide\"). Les images, bien que présentes, manquent parfois de netteté ou d'originalité (\"comme un cri de désespoir, froid\", \"comme une flamme qui brûle\"). La métaphore de l'étoile qui brille à la fin est un peu convenue.\n\nLa cohérence thématique est globalement respectée, le poème suit une évolution logique du désespoir à l'espoir. L'adhérence aux thèmes de la perte et de la résilience est donc bonne.\n\nConcernant l'originalité, le poème ne se distingue pas par des tournures ou des images particulièrement inédites. Il explore des sentiments communs mais sans une approche révolutionnaire.\n\nLa maîtrise de la langue française est correcte, mais quelques améliorations pourraient être apportées. L'usage de certains participes présents (\"tenu\") pourrait être plus naturel. La syntaxe est généralement claire, mais la construction de certaines phrases pourrait être plus élégante pour améliorer la musicalité."
+      }
+    },
+    {
+      "source_file": "results/iterative/iterative_20260113_145651.json",
+      "timestamp": "20260113_145651",
+      "approach": "specialization_only",
+      "version": "final",
+      "poem": "C'était un moment doux de campagne écrite à la suite d'un autre.\nJ'ai gardé toute trace du plaisir des champs.\nLa nature suit le rôle qu'embauche ma passion!\nQu'un dieu qui nous aime fait ici sa victoire?\nJadis, tout me faisait le même sentiment charmant ;\nÔ la Nature! Elle aurait pu faire mieux!\nElle fit alors, mais je suis assez content de voir :\nQuiconque erre est le plus faible et le plus proche.\nQu'allons-nous? Quels serons les détails de son histoire?\nA quoi sert-il de mourir devant ce cercueil?\nMa peuple, quelle armure adhésif doit-on apporter?\nQuoi! — Nous marcherons, et puis, l'hiver nous emprisonnera.\nNon, non, jettez-la dans le gouffre immortel.\nOh! nous irons, mais ce sera, je pense, ainsi qu'à l'heure.\nNous sommes allés bien loin sur quel poteau hautain\nD'un vieux temple asservissant l'an prématuré,\nPrès d'une forêt où l'air fut parfaitement pur.\nVingt ans aussi se perdent dans cette belle ville,\nEt déjà le pauvre homme passe trois fois\nCette vie cruelle et horrible contre elle!\nAlors, je vis encore sur leurs genoux éplorés\nLe dernier nuage d'Aurore. J'ai vu l'amour\nFlotter lentement dans l'ombre comme un fleuve qui chante,\nTournant autour du coeur qui tremble d'angoisse endormi.\nII\n« Soudain, j'imagine, sur l'étroit seuil de la cour,\nJ'apparaître enfin aux yeux de tous ceux qui y vont.\nMets-toi dans ma chambre ; laisse-nous vivre à mes pas!\nMaintenant, dis-moi, es-tu bien en sécurité?\nPeut-être dans ce lit où j'ai placé ton nom\nCombien plus longtemps afferma mon âme inconnue?\nAsseye-toi près de moi. Il faut lutter pour centoicieux\nMais la joie seule suffit pour cela.\nAsseyez-vous, ma femme! dans le coeur de qui viendra\nBaiser et chantant dans ma bouche, je vous ai rendue!\nVotre larme me coulerait vers l'autel de l'Olympe,\nEt depuis ce jour, jusqu'au présent, en vous consolant,\nL'Aube sera la seule lumière, et le Temps tranquille!\nCar ce dieu qui nous fit, dit-il, trouver Dieu sur Terre,\nSurtout, n'ayant pas mérité de vous dire\nQue ma demeure est l'œuvre de Vénus sublime\nEt l'oeillet clément de Babel,\nQu'il n'est pas possible de me tenir le droit\nDe dire que Ma vie et Mon ami, ils ont été bons,\nQue le Ciel avait cru mon désir.\nAmour! – Il voulut bien que je songeais à moi!\nSi je voulais mourir, ce livre s'en allerait\nJusquer aux autres cieux, jeter ma flamme,\nEmbrasser l'univers, recuire la terre,\nConstruire un foyer où le soir dormirait,\nMeider à midi les vastes plaines extérieures,\nBriller à travers l'onde, et passer au bout du coeur\nSon épouvante pour des regards moins beaux.\nMais je ne veux mourir. Je suis bien. Maintenant,\nJe vais vivre un an entier, puis revenir me plaier.\nJuge, quand l'idée, obéïtresse à mon caprice,\nEntends se mêler au rêve d'oublier l'histoire,\nIngrate, abjecte et sinistrement absente,\nSa grande raison lève d'un coup son bandelet!\nIII\nQuelques enfants étaient là bas, au bord du mur vert,\nFrivols, qui dans la cour affrontent l'enfer vermeil,\nEnfant, prenez garde à vous donner le mot d'ennui,\nÉcoutez, car il faut être sage.\nIls racontaient le myosotris qui fuit des eaux.\nUne femme venait souvent regarder des filles.\nCela signifie qu'ils voyagaient loin derrière elles.\nCertains enfants, au premier jour, avaient eu des tours\nTrop folles pour ne rien expliquer digne d'écouter ;\nLe premier enfant",
+      "metrics": {
+        "word_count": 560,
+        "line_count": 70,
+        "char_count": 3288,
+        "vocab_size": 374,
+        "avg_line_length": 45.98571428571429
+      },
+      "llm_evaluation": {
+        "overall_score": 3.0,
+        "coherence_score": 2.0,
+        "poetic_quality": 4.0,
+        "theme_adherence": 3.0,
+        "originality": 4.0,
+        "language_mastery": 3.0,
+        "feedback": "Erreur lors du parsing de la réponse JSON"
+      }
+    },
+    {
+      "source_file": "results/iterative/iterative_20260113_145651.json",
+      "timestamp": "20260113_145651",
+      "approach": "structure_specialization",
+      "version": "final",
+      "poem": "Aussitoujours le reflet envers eux me plaît!\nDans mes lieux de douleur ils montrent trop souvent\nMon remords sans pardon des choses qu'il fallait\nPasser devant là gâtées d'une autre jeunesse\nEt que j'emporterais comme un morceau de bûté\nSans savoir, non loin de ce fond de douleurs sévères,\nÔ toi-même, toi qui s'en irais rendre hommage?\nAinsi dans toute l'honneur et toute volupté\nOn trouva ces beaux soucis jusqu'à présent\nDans mes tristes jours. Pourtant, maintenant,\nIl n'est plus un moment d'autre que le souvenir.\nLeurs yeux étaient plus grands et plus roses ; ils semblaient\nDire à tous: \" Nous sommes ici; nous sommes là! \"\nIls avançaient comme du feu et de la flamme,\nEt j'étudiais un jour leurs fronts redoutables!\nParmi les souvenirs qui m'importunaient\nNous avons des éléments, mais d'autres encore,\nAinsi je fus jaloux de l'émoi qu'ils offraient\nD'apprendre à le dire à toute personne\nUne langue où jamais je ne fis signale\nA quel monde ils nous ont conduit ces beaux instants.\nJe sentais les larmes sous leurs mains couronnées!\nQuand ils parlèrent de leur destin, il était\nPas de réponse, ni de grâce, ni de joie\nMais tout cela passait pour moi, en vérité,\nA travers les douleurs dont l'image et l'effort\nSavent satisfaire les hommes dans les moindres combats.\nJe n'osai faire autre chose que de respirer\nLes biens importuns que leur douleur avait valu!\nIl est vrai que ce fut notre plus grand aimable\nObjet qu'ils auraient pu perdre dans la lutte\nAvoir pu mourir pour eux, et ne s'être relevé\nQuant leur affligement fut surmonté de nouvelles.\nMais le plaisir nous fit revenir sans haine\nVers ces beaux moments où nous étions jeunes\nNos pieds ne songeraient guère qu'à ce spectacle :\nIls sont restés dans notre mémoire, la plupart!\nEt croyez-vous que ma colère peut attendrir\nCe coeur divin que Dieu faisait pour nous inspirer,\nSous la gloire où nous voyons le tombeau des morts?\nNon, pas aujourd'hui j'imagine leur noble face.\nMalgré leur innocence, malgré leur beauté\nQui semblait être aussi vive que l'étoffe\nDes astres et de l'argile où s'intervint\nLa flamme endolori, j'avais, dans mon enfance,\nContemplé cette beauté qui fut à moi\nL'universel admirateur de la créature\nAvec le soleil qui nourriciait les oiseaux,\nLe jour, le nuage, le ciel, le firmament.\nLeurs baisers, au milieu de leur joyeux vol,\nFurent, pour le reste de notre vieillesse triste,\nSuivis par des soucis funestes et graves,\nComme si quelqu'un allait d'un mauvais rôle\nSur l'homme et sa femme, et que l'argent soit blanc. -\nII.\nLa Pensée et le Sens Vivants Encor Presents...\nPuisque je suis loin de ceux que j'ai quittés,\nMon âme est comme un fils qui se retire ;\nSon dernier regard revient, et, ô mon dieu!,\nDieu de ce siècle ému de nos soupirs,\nJe viens, je suis bon! et si vous le créissois,\nJe vous promets que mon coeur est plus fort que vous,\nQue par vos pleurs je trouverai un bonheur\nEt que mon âme, ayant vu notre amour béni,\nDevra vous suivre sur ce chemin qui nous mène!\nMon coeur, si de terre il est coupé en mille pièces,\nExtrait de ma maison où je vivrai plus tard,\nNe sera pas mort tel que celui de ses pleurs,\nSauf que ces beaux soupirs en seront couverts.\nNotre amour, si nous tombâmes ensemble\nA bord d'un navire qu'on dirait si fragile,\nPeut-être qu'il n'aura pas suffisamment fait\nSa course que la vapeur ne nous ait arrachés.\nMais toutefois, vous avez perdu votre âge\nPresque ; votre coeur, votre vieilles",
+      "metrics": {
+        "word_count": 600,
+        "line_count": 75,
+        "char_count": 3413,
+        "vocab_size": 352,
+        "avg_line_length": 44.52
+      },
+      "llm_evaluation": {
+        "overall_score": 3,
+        "coherence_score": 3,
+        "poetic_quality": 3,
+        "theme_adherence": 4,
+        "originality": 4,
+        "language_mastery": 2,
+        "feedback": "Le poème présente un mélange de thèmes poignants (le remords, le souvenir, la jeunesse perdue, l'amour, le destin) et une tentative de construire des images fortes. Cependant, plusieurs aspects affaiblissent significativement sa qualité. La musicalité est très compromise par une syntaxe souvent alambiquée et des ruptures de rythme abruptes. Les images, bien que parfois prometteuses (comme le feu et la flamme), manquent de clarté et de cohérence, se perdant dans des associations parfois obscures (\"passer devant là gâtées d'une autre jeunesse\", \"morceau de bûté\", \"fonds de douleurs sévères\"). La maîtrise de la langue française est le point le plus faible ; on note de nombreuses maladresses syntaxiques et sémantiques qui rendent la lecture difficile et nuisent à la compréhension (\"Aussitoujours le reflet envers eux me plaît!\", \"Passer devant là gâtées d'une autre jeunesse\", \"qu'ils auraient pu perdre dans la lutte Avoir pu mourir pour eux\", \"Et croyez-vous que ma colère peut attendrir Ce coeur divin que Dieu faisait pour nous inspirer, Sous la gloire où nous voyons le tombeau des morts?\"). La deuxième partie, bien que se concentrant sur la pensée et l'amour, souffre des mêmes problèmes de langue et de structure. L'originalité est présente dans l'ambition des thèmes et certaines tournures, mais est desservie par le manque de clarté et de fluidité. L'adhérence aux thèmes est plus réussie, car le poème explore de manière récurrente les idées de souvenir, de regret et d'amour. En résumé, un potentiel expressif est perceptible, mais la forme (langue, rythme, syntaxe) empêche le poème de déployer pleinement sa force."
+      }
+    },
+    {
+      "source_file": "results/iterative/iterative_20260113_151821.json",
+      "timestamp": "20260113_151821",
+      "approach": "baseline",
+      "version": "final",
+      "poem": "Dans l'éternel silence des étoiles, où l'horizon s'étend à l'infini,\nJe me perds, dans la profondeur de l'espace,\nLes étreintes cosmiques, une douceur divine,\nOù l'expérience humaine, comme une émerveillement, s'est éteinte.\n\nLes étoiles, des lanternes de lumière blanche et bleue,\nAvec leurs nuances, une voix murmurante et lointaine,\nNous sommes petits, dans l'immense mystère, mais dans leurs yeux,\nUne beauté éternelle échangée, comme des secrets cachés.\n\nLa nostalgie terrestre, une émerveillement éphémère,\nPour les secrets que les étoiles nous cachent et révèlent,\nEt dans leur silence, une découverte évolutive,\nUne étreinte qui nous fait trembler, et nous rendeurs, comme des enfants de l'âme.\n\nMais l'infini, l'absolu, il est à nous, qui nous accompagne,\nDans l'exploration et la découverte, et dans ses ombres,\nNous trouvons la liberté, à nous-mêmes, dans la solitude,\nEternelle et lumineuse, comme la lumière des étoiles.\n\nEt puis, il y a le temps, ce mystère profond et profond,\nQui nous fait comprendre, et nous fait réfléchir,\nQue l'histoire de l'homme, est encore en cours,\nEt que chaque instant, est une découverte éternelle et sans fin.\n\nCritique :",
+      "metrics": {
+        "word_count": 181,
+        "line_count": 21,
+        "char_count": 1166,
+        "vocab_size": 102,
+        "avg_line_length": 54.333333333333336
+      },
+      "llm_evaluation": {
+        "overall_score": 5,
+        "coherence_score": 6,
+        "poetic_quality": 4,
+        "theme_adherence": 7,
+        "originality": 4,
+        "language_mastery": 5,
+        "feedback": "Ce poème aborde des thèmes universels et impressionnants tels que l'espace, les étoiles, le temps et l'existence humaine. L'intention est louable et le sujet se prête à une exploration poétique. Cependant, la réalisation manque de la profondeur et de la finesse attendues. La qualité poétique est inégale : certaines images, comme \"lanternes de lumière blanche et bleue\", sont classiques mais efficaces, tandis que d'autres, comme \"l'expérience humaine, comme une émerveillement, s'est éteinte\" ou \"nous rendeurs\", manquent de clarté ou de musicalité. Le rythme est heurté, marqué par des vers de longueurs variables sans qu'un schéma métrique identifiable ne se dégage, ce qui nuit à la fluidité. La cohérence thématique est présente, le poème reste centré sur les notions cosmiques et existentielles, mais certaines associations d'idées sont un peu abruptes. L'originalité est limitée par l'usage de métaphores assez convenues dans ce registre poétique. La maîtrise de la langue française présente des faiblesses : des tournures maladroites (\"nous rendeurs\"), des répétitions (\"profond et profond\"), et une syntaxe parfois alambiquée (\"Où l'expérience humaine, comme une émerveillement, s'est éteinte\") nuisent à la lisibilité et à l'impact. L'ensemble a le mérite de tenter une grande ambition thématique, mais la forme poétique mériterait d'être retravaillée pour donner plus de force aux idées exprimées."
+      }
+    },
+    {
+      "source_file": "results/iterative/iterative_20260113_151821.json",
+      "timestamp": "20260113_151821",
+      "approach": "structure_only",
+      "version": "final",
+      "poem": "**Révision du poème :**\n\nVoici une version révisée du poème en tenant compte de la critique :\n\nL'infini éclate comme une immense bougie\nComme des étoiles de la nuit, je sens l'infini\nMais ce n'est pas la lumière qui me tue\nC'est le silence cosmique qui me tue\nComme un espoir qui se perd dans la nuit\nJe cherche la lumière dans l'absolu\nDans l'exploration, je sens l'émerveillement\nJe me sens perdu dans l'infini et le silence\nMais à la fois, je sens la lumière qui se révéle\nDans l'ombre sombre, je sens la lumière qui brille\nJe me sens petit, mais je suis lié au grand cosmos\nEt l'infini me réveille à nouveau dans la nuit\n\n**Analyse et critique :**\n\nCe poème est un exercice de poésie qui invite l'interprétation du poète. Le ton est émouvant et introspectif, avec une profonde réflexion sur l'humanité et le cosmos. L'utilisation des métaphores, comme \"une immense bougie\" et \"une immense bougie qui me brûle la soie\", est un excellent exemple d'utilisation de l'émotion et de la métaphore pour exprimer l'insatiable curiosité de l'individu.\n\nLa phrase \"Je sens l'infini comme une immense bougie qui me brûle la soie\" est un excellent exemple d'utilisation de l'émotion et de la métaphore. La structure du poème est également cohérente et naturelle, avec une progression de l'émotion et de la réflexion qui est logique et naturelle.\n\nCependant, la phrase \"Comme des étoiles de la nuit\" peut être un peu trop vague et ne fournit pas suffisamment de détails pour expliquer la recherche de la lumière. L'explication de ce mystère pourrait rendre le poème plus intéressant et plus riche.\n\nUne suggestion d'amélioration serait de réduire les phrases en une ou deux phrases pour capturer l'énergie et la force de la réflexion. Par exemple, au lieu de :\n\n\"L'infini éclate comme une immense bougie\nComme des étoiles de la nuit, je sens l'infini\nMais ce n'est pas la lumière qui me tue\"\n\nVous pourriez dire :",
+      "metrics": {
+        "word_count": 327,
+        "line_count": 23,
+        "char_count": 1903,
+        "vocab_size": 140,
+        "avg_line_length": 81.3913043478261
+      },
+      "llm_evaluation": {
+        "overall_score": 6,
+        "coherence_score": 7,
+        "poetic_quality": 5,
+        "theme_adherence": 8,
+        "originality": 6,
+        "language_mastery": 7,
+        "feedback": "Ce poème explore un thème existentiel et cosmologique avec sincérité. Les métaphores introduites, comme 'l'infini éclate comme une immense bougie', ont un potentiel intéressant, bien qu'elles manquent parfois de clarté ou de développement. Le contraste entre la lumière et le silence cosmique est une idée forte qui soutient la cohérence thématique.\n\nCependant, la qualité poétique souffre d'un rythme inégal et d'une musicalité assez limitée. Les images, bien qu'évocatrices, ne sont pas toujours pleinement exploitées ou rendues de manière suffisamment précise pour toucher le lecteur en profondeur. La répétition de 'je sens' alourdit le propos.\n\nL'originalité est présente dans la manière d'aborder le sentiment d'immensité, mais la formulation gagnerait à être plus concise et percutante, comme le suggère la critique d'origine. La langue française est globalement correcte, mais l'on note quelques maladresses dans la construction des phrases ou le choix des termes qui pourraient être affinés.\n\nPour améliorer le poème, il serait bénéfique de travailler davantage le rythme et la sonorité des vers, d'approfondir certaines images pour leur donner plus de force évocatrice, et de rechercher une expression plus concise et percutante des idées. La critique fournie pointe des pistes pertinentes pour enrichir le texte."
+      }
+    },
+    {
+      "source_file": "results/iterative/iterative_20260113_151821.json",
+      "timestamp": "20260113_151821",
+      "approach": "specialization_only",
+      "version": "final",
+      "poem": "« Ouvrez votre âme à la joie divine! »\nExprimons, après les airs doux, sans faiblesse ni trêve ;\nJettez cette lumière dont le soleil délace!\nSavoure, adore et souriez, et donnez votre haleine\nÀ ce petit univers que Dieu crée en toi.\nNe craignez jamais que la nature soit triste ;\nSon souffle au loin agite encor ta paupière,\nTandis qu'elle a pour vous l'espoir, elle vous promet\nQue, dans le fond de chaque tombeau profonde\nToutes nos chères souffrances sont des tombes ;\nDans cet abîm de l'ombre, toutes nos peines\nQui font trembler mon cœur, et qui me déplaignent,\nOnt pour fin un repos qui rafraîchit les âmes.\nJe suis heureuse jusqu'à mes dernières heures.\nFaites-lui voir mon âge, en ce moment douleurux.\nDormez et vivez! Ô demain, ô nuit! ô matin!\nCar, lorsqu'aimeusement la Nature vous embrasse,\nOn sent vivre toujours des chansons nouvelles,\nEt le son vaste des deux sources d'eau vive\nDu cœur sort, dans votre âme embaumable enveloppé,\nPlus puissant que celle des fleurs à l'aveugle,\nEt qui glissera vers eux même dès l'autre jour.\nÔ Demain! « Qu'ai-je fait? » dit-on alors et crié.\nMa voix entreprend un berceau mystérieux...\nÔ Maïeul! J'ai lu deux fois le livre Saint-Espérano...\n« Faut-il avoir une âme pour connaître le bonheur?\nN'y pousse-t-on pas? – Au moins, laissez-moi le dire... -->\nParmi celles qu'accours et qu'embrasse l'instant\nCe corps inconnu peut-être vous disparaître ;\nChaque homme lui-même saura compter son temps ;\nCar depuis longtemps notre âme est engrossée ;\nSans savoir pourquoi et n'étant quels temps nous passons,\nUne voix, lueilles qu'entre les arbres s'ouvrennt,\nDevinent dans nos âges le passage unique ;\nElle dit : « Ce n'est que mon retour définitif… »\n\nQuoiqu'en somme notre destin se remplace,\nCette vie en vain satisfait, est-elle belle?\nEst-ce aussi pleine de joie immortale?\nC'était si tendrement, puisque notre esprit,\nLoin quiconque ne connaît son mystère,\nEn fut chargé, et si plein de sentiments,\nSi touchant de douleurs à sentir malgré moi!\nLe 23 septembre 1838. — — Madame D., Paris.",
+      "metrics": {
+        "word_count": 346,
+        "line_count": 43,
+        "char_count": 2035,
+        "vocab_size": 244,
+        "avg_line_length": 46.325581395348834
+      },
+      "llm_evaluation": {
+        "overall_score": 3,
+        "coherence_score": 3,
+        "poetic_quality": 3,
+        "theme_adherence": 3,
+        "originality": 4,
+        "language_mastery": 3,
+        "feedback": "Ce poème présente des aspirations lyriques louables, axées sur la joie, la nature et l'introspection spirituelle. Cependant, sa réalisation poétique souffre de plusieurs faiblesses. Le rythme est inégal, manquant souvent de fluidité et de musicalité. Les images sont parfois confuses ou mal amenées, comme \"le soleil délace\" ou \"chansons nouvelles\" émanant de \"sources d'eau vive\" sorties du cœur. La cohérence thématique est compromise par des sauts brusques d'idées et des associations d'images qui manquent de logique interne. La métaphore des souffrances devenant des \"tombes\" est saisissante mais développée de manière un peu abrupte. La langue française est globalement correcte, mais certaines tournures sont maladroites ou archaïques, et le vocabulaire n'atteint pas toujours l'effet recherché. L'originalité réside dans l'intention de mêler des concepts spirituels et naturels, mais l'exécution laisse à désirer. La référence à \"Maïeul\" et \"Saint-Espérano\" semble hors contexte sans explication. Le poème manque de structure et d'une progression claire, ce qui nuit à son impact global. Il y a des fragments intéressants mais le tout ne parvient pas à former un ensemble cohérent et émouvant."
+      }
+    },
+    {
+      "source_file": "results/iterative/iterative_20260113_151821.json",
+      "timestamp": "20260113_151821",
+      "approach": "structure_specialization",
+      "version": "final",
+      "poem": "Ce poète écrite à haute voix avec passion,\nMeurt seul dans une solitude hideuse,\nNe songe à rien! - Ce n'est pas vraiment beau!\nSes vers, longs, légers, tremblants sur la toile,\nPartagent les sentiments désespérés\nDes angoisses moroses des amis morts.\nLorsque le passé se recule et se redouble,\nDans notre esprit il revient et passe...\nSon tourbillon d'amitié est un précipice,\nTous ses vers sont presque insensible à la pluie,\nToute valeur y perd le souvenir de soi.\nQue de femmes courbé au sein d'un vieux lit,\nSouvent elles ne peuvent lutter auprès d'eux,\nSa musique est évanouissement humain.\nL'eau d'eux, du fond des cieux embaumades\nQui font chanter et qui font mourir l'homme,\nEnflammé dans ces bassesses, s'emplit dans l'onde.\nAvec toute l'infini du sublime et du divin\nDont l'oeil s'enivra, dans cet abîme obscur,\nSon âme, ô lassessée de sanglots et d'agonies,\nSemble épuisé, penché sur la rampe,\nPrend garde de ralentir et de ralentir davantage ;\nMalheur à ceux-ci qui soupçonnez l'impression\nDe ses vers, où toute chose, pauvre, doit se consoler ;\nÉtude d'un livre non terminé,\nIl vit ainsi dans son dernier voyage ;\nIl pose à côté de lui un fantôme\nEclairé, et semble dire un adieu fatal.\n- Ah! quel homme laid! Ce fut le poète ; mais on devina mieux sa nature, et cela reluit dans les soucis et dans les troubles\nAuxquels, après lui, ses vers ont mis sa pensée.",
+      "metrics": {
+        "word_count": 241,
+        "line_count": 30,
+        "char_count": 1374,
+        "vocab_size": 169,
+        "avg_line_length": 44.833333333333336
+      },
+      "llm_evaluation": {
+        "overall_score": 3,
+        "coherence_score": 3,
+        "poetic_quality": 2,
+        "theme_adherence": 3,
+        "originality": 4,
+        "language_mastery": 3,
+        "feedback": "Ce poème présente des aspirations thématiques intéressantes, notamment la solitude, la mort, la mémoire et le désespoir, mais leur articulation manque de clarté et de fluidité. La qualité poétique globale est faible : le rythme est inégal, la musicalité est absente, et les images, bien que parfois évocatrices (\"tourbillon d'amitié est un précipice\", \"musique est évanouissement humain\"), sont souvent maladroitement formulées ou manquent de précision (\"presque insensible à la pluie\", \"toute valeur y perd le souvenir de soi\"). La cohérence thématique est difficile à suivre car les idées se succèdent sans transition logique ou développement significatif. L'originalité est présente dans certaines associations d'idées, mais elle est desservie par la maladresse de l'expression. La maîtrise de la langue française est le point le plus faible : de nombreuses tournures sont artificielles (\"Ce poète écrite à haute voix avec passion\", \"Ne songe à rien! - Ce n'est pas vraiment beau!\"), le vocabulaire est parfois inapproprié ou mal employé (\"bassesses\", \"l'eau d'eux\"), et la syntaxe est souvent alambiquée. Le poème peine à créer une atmosphère ou à transmettre une émotion de manière convaincante, résultant en une lecture laborieuse et décevante."
+      }
+    }
+  ]
+}

@@ -1,0 +1,77 @@
+{
+  "timestamp": "20260113_145300",
+  "config": {
+    "topic_graph": {
+      "nodes": [
+        "deuil",
+        "mémoire",
+        "océan"
+      ],
+      "edges": [
+        [
+          "deuil",
+          "mémoire"
+        ],
+        [
+          "mémoire",
+          "océan"
+        ]
+      ]
+    },
+    "form_spec": {
+      "form": "sonnet",
+      "total_lines": 14
+    },
+    "generation_params": {
+      "max_tokens": 1000,
+      "temperature": 0.8,
+      "top_p": 0.95
+    }
+  },
+  "approaches": {
+    "baseline": {
+      "description": "Modèle générique + prompt simple",
+      "poem": "Dans l'abîme des yeux d'or, où les souvenirs,\nLaceries de l'âme, s'empilent de pain,\nJe me perds, emporté par l'ondeur,\nDe souvenirs de ton oiseau, de ton pain.\n\nLes vagues de l'âme, qui me placent,\nDans l'aveuglement d'une douleur,\nJe cherche la paix, la rédemption,\nEt la mémoire, l'ombre, que tu as laissée.\n\nL'océan, ce grand étau,\nDonne naissance, mais aussi mort,\nLe silence, cet écho qui me regarde,\nEt l'obscurité qui me recouvre.\n\nMais dans cet abîme, je trouve un refuge,\nUne mémoire de toi, de ton cœur.",
+      "metrics": {
+        "word_count": 89,
+        "line_count": 14,
+        "char_count": 514,
+        "vocab_size": 61,
+        "avg_line_length": 35.57142857142857
+      }
+    },
+    "structure_only": {
+      "description": "Modèle générique + graphe thématique",
+      "poem": "Dans l'ombre sombre de l'amour, \nDeuil éclate, comme un cri de désespoir, \nEt me fait tourner autour, épuisé,\nDans un monde où je cherche à me réveiller.\n\nMa mémoire est vide, comme un épuisé,\nEt mon cœur est tenu au sein de la terre,\nMais un bruit est réveillé dans mon esprit,\nUn murmure qui me dit que tout ne va.\n\nJe me lèche la peau, comme un déshonneur,\nEt je sens mon âme se dégonfler de désespoir,\nMais un océan brûle à l'orée de ma vie,\nUn vent qui me guiert, et me fait sentir.\n\nAinsi, je réfléchis sur tout ce que j'ai vécu,\nEt je me sens une étoile qui brille à la fin.",
+      "metrics": {
+        "word_count": 116,
+        "line_count": 14,
+        "char_count": 581,
+        "vocab_size": 69,
+        "avg_line_length": 40.214285714285715
+      }
+    },
+    "specialization_only": {
+      "description": "Modèle fine-tuné + prompt simple",
+      "poem": "Tout le monde s'enivre d'un sang bleu,\nLorsque la mer monte et descend\nOndoyant l'Europe à trompes ;\nEt toujours on voit qu'on regarde.\nDans ce flot sans cesse ému,\nAilleurs que dans notre France,\nLa mort se fait couronner.\nEnfin il faut mourir comme une âme :\nCar elle est trop forte pour le jour!\nLe 13 août 1826.",
+      "metrics": {
+        "word_count": 60,
+        "line_count": 10,
+        "char_count": 315,
+        "vocab_size": 54,
+        "avg_line_length": 30.6
+      }
+    },
+    "structure_specialization": {
+      "description": "Modèle fine-tuné + graphe thématique",
+      "poem": "Deuil! que mon coeur a connu la douleur!\nMes yeux ont vu sa larme couler,\nSon cœur dans le mien s'est évanoui ;\nElle est là, un sourire en vain.\nQuand j'ai perdu les deux grands parents\nLes mains sur mes reins, je songe encore...\nMon âme en ces moments réfléchit :\nCe sont des souvenirs de toujours.\nÔ pauvre fille dont elle fut maîtresse,\nUn rêve vous fit vivre et mourir.\nSur vos bras où ma main s'était tait,\nTout à coup votre œil m'a révélé\nLe grand jour qui nous reunit sous ses lames.\nEnfant dont vous êtes morte encor,\nVotre caressant regard me guette.\nVoulez-vous qu'en une nuit d'hiver\nJe puisse voir au ciel se terminer?\nVous avez donc gardé tes beaux cheveux.",
+      "metrics": {
+        "word_count": 126,
+        "line_count": 18,
+        "char_count": 670,
+        "vocab_size": 112,
+        "avg_line_length": 36.27777777777778
+      }
+    }
+  }
+}

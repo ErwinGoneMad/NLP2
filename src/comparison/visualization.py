@@ -12,21 +12,39 @@ def visualize_comparison(results: Dict[str, Any]):
         (results["structure_specialization"]["poem"], "4. Structure + Specialization\n(Modèle fine-tuné + graphe)")
     ]
     
-    fig, axes = plt.subplots(2, 2, figsize=(16, 12))
+    fig, axes = plt.subplots(2, 2, figsize=(18, 14))
     fig.suptitle("Comparaison des 4 Approches", fontsize=16, fontweight="bold")
     
     for idx, (poem, title) in enumerate(poems_data):
         ax = axes[idx // 2, idx % 2]
-        wrapped_poem = "\n".join([textwrap.fill(line, width=60) if len(line) > 60 else line 
-                                   for line in poem.split("\n")])
-        ax.text(0.05, 0.95, wrapped_poem, transform=ax.transAxes, 
-                fontsize=9, verticalalignment="top", 
+        
+        # Wrapper le texte avec une largeur appropriée
+        wrapped_lines = []
+        for line in poem.split("\n"):
+            if len(line) > 70:
+                wrapped_lines.extend(textwrap.wrap(line, width=70))
+            else:
+                wrapped_lines.append(line)
+        
+        # Limiter le nombre de lignes pour éviter la superposition (max ~30 lignes)
+        max_lines = 30
+        if len(wrapped_lines) > max_lines:
+            wrapped_lines = wrapped_lines[:max_lines]
+            wrapped_lines.append(f"\n... (texte tronqué, {len(poem.split())} mots au total)")
+        
+        wrapped_poem = "\n".join(wrapped_lines)
+        
+        # Positionner le texte avec un espace pour le titre
+        ax.text(0.02, 0.98, wrapped_poem, transform=ax.transAxes, 
+                fontsize=8, verticalalignment="top", horizontalalignment="left",
                 family="monospace",
-                bbox=dict(boxstyle="round", facecolor="wheat", alpha=0.3))
-        ax.set_title(title, fontsize=12, fontweight="bold")
+                bbox=dict(boxstyle="round", facecolor="wheat", alpha=0.3, pad=0.5))
+        ax.set_title(title, fontsize=11, fontweight="bold", pad=10)
+        ax.set_xlim(0, 1)
+        ax.set_ylim(0, 1)
         ax.axis("off")
     
-    plt.tight_layout(rect=[0, 0.03, 1, 0.97])
+    plt.tight_layout(rect=[0, 0.03, 1, 0.97], h_pad=2.0, w_pad=2.0)
     plt.show()
     
     metrics_list = []

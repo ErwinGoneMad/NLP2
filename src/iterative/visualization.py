@@ -5,7 +5,7 @@ from typing import Dict, Any
 
 
 def visualize_iterative_results(results: Dict[str, Any], approach_name: str):
-    fig, axes = plt.subplots(2, 2, figsize=(16, 12))
+    fig, axes = plt.subplots(2, 2, figsize=(18, 14))
     fig.suptitle(f"Évolution Itérative - {approach_name}", fontsize=16, fontweight="bold")
 
     original = results["original"]
@@ -33,23 +33,40 @@ def visualize_iterative_results(results: Dict[str, Any], approach_name: str):
                                    if not (line.strip().startswith("-") and len(line.strip()) < 50)
                                    and not any(keyword in line.lower() for keyword in ["voici", "version révisée", "points forts", "faiblesses"])])
             poem_clean = "\n".join([line for line in poem_clean.split("\n") if line.strip()])
-            wrapped_poem = "\n".join([textwrap.fill(line, width=60) if len(line) > 60 else line 
-                                      for line in poem_clean.split("\n")])
-            ax.text(0.05, 0.95, wrapped_poem, transform=ax.transAxes, 
-                    fontsize=9, verticalalignment="top", 
+            
+            # Wrapper le texte avec une largeur appropriée
+            wrapped_lines = []
+            for line in poem_clean.split("\n"):
+                if len(line) > 70:
+                    wrapped_lines.extend(textwrap.wrap(line, width=70))
+                else:
+                    wrapped_lines.append(line)
+            
+            # Limiter le nombre de lignes pour éviter la superposition (max ~30 lignes)
+            max_lines = 30
+            if len(wrapped_lines) > max_lines:
+                wrapped_lines = wrapped_lines[:max_lines]
+                wrapped_lines.append(f"\n... (texte tronqué, {len(poem_clean.split())} mots au total)")
+            
+            wrapped_poem = "\n".join(wrapped_lines)
+            
+            ax.text(0.02, 0.98, wrapped_poem, transform=ax.transAxes, 
+                    fontsize=8, verticalalignment="top", horizontalalignment="left",
                     family="monospace",
-                    bbox=dict(boxstyle="round", facecolor="wheat", alpha=0.3))
+                    bbox=dict(boxstyle="round", facecolor="wheat", alpha=0.3, pad=0.5))
         elif poem and poem.startswith("Erreur"):
             ax.text(0.5, 0.5, poem, transform=ax.transAxes, ha="center", va="center",
                    fontsize=10, color="red")
         else:
             ax.axis("off")
         
-        ax.set_title(title, fontsize=12, fontweight="bold")
+        ax.set_title(title, fontsize=11, fontweight="bold", pad=10)
+        ax.set_xlim(0, 1)
+        ax.set_ylim(0, 1)
         if poem:
             ax.axis("off")
 
-    plt.tight_layout(rect=[0, 0.03, 1, 0.97])
+    plt.tight_layout(rect=[0, 0.03, 1, 0.97], h_pad=2.0, w_pad=2.0)
     plt.show()
 
     metrics_data = []

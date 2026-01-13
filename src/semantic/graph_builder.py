@@ -48,8 +48,7 @@ def expand_graph_with_embeddings(
         # Pour l'instant, on utilise une approche simplifiée : encoder le nœud
         # et trouver des mots similaires dans un vocabulaire prédéfini
         
-        # Vocabulaire français commun lié aux thèmes poétiques
-        # (Cette liste pourrait être étendue ou chargée depuis un fichier)
+        # Vocabulaire français étendu lié aux thèmes poétiques
         common_french_words = [
             "amour", "douleur", "joie", "tristesse", "mélancolie", "bonheur",
             "souvenir", "mémoire", "oubli", "passé", "présent", "futur",
@@ -61,7 +60,18 @@ def expand_graph_with_embeddings(
             "silence", "bruit", "voix", "chant", "musique", "son",
             "lumière", "ombre", "ténèbres", "clarté", "obscurité",
             "cœur", "âme", "esprit", "corps", "pensée", "rêve",
-            "espoir", "désespoir", "peur", "courage", "force", "faiblesse"
+            "espoir", "désespoir", "peur", "courage", "force", "faiblesse",
+            "infini", "espace", "cosmos", "galaxie", "planète", "univers",
+            "exploration", "découverte", "aventure", "voyage", "chemin",
+            "solitude", "isolement", "rencontre", "union", "séparation",
+            "émerveillement", "admiration", "surprise", "étonnement", "merveille",
+            "mystère", "secret", "énigme", "inconnu", "caché",
+            "temps", "durée", "moment", "instant", "éternité",
+            "nostalgie", "regret", "souhait", "désir", "aspiration",
+            "terre", "sol", "paysage", "horizon", "montagne", "vallée",
+            "profondeur", "hauteur", "largeur", "distance", "proximité",
+            "chaleur", "froid", "douceur", "dureté", "tendresse",
+            "liberté", "contrainte", "libération", "captivité", "envol"
         ]
         
         # Encoder tous les mots du vocabulaire une seule fois
@@ -85,13 +95,29 @@ def expand_graph_with_embeddings(
             # Si on a le vocabulaire encodé, calculer les similarités
             if vocab_embeddings is not None:
                 similarities = []
+                node_lower = node.lower().strip()
+                
                 for i, word_emb in enumerate(vocab_embeddings):
+                    word = common_french_words[i]
+                    word_lower = word.lower().strip()
+                    
+                    # Exclure le nœud lui-même et les mots identiques
+                    if word_lower == node_lower or word_lower in node_lower or node_lower in word_lower:
+                        continue
+                    
                     sim = cosine_similarity(node_embedding, word_emb)
-                    similarities.append((common_french_words[i], sim))
+                    
+                    # Filtrer les similarités trop élevées (probablement des mots identiques)
+                    if sim < 0.98:
+                        similarities.append((word, sim))
                 
                 # Trier par similarité décroissante et prendre les top_k
                 similarities.sort(key=lambda x: x[1], reverse=True)
                 top_words = similarities[:top_k]
+                
+                # Si on n'a pas assez de mots, prendre ceux qu'on a
+                if len(top_words) < top_k and len(similarities) > 0:
+                    top_words = similarities[:min(top_k, len(similarities))]
                 
                 expanded_graph["expanded_nodes"][node] = {
                     "lexical_field": [word for word, _ in top_words],

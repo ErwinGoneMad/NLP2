@@ -1,0 +1,172 @@
+{
+  "timestamp": "20260113_150853",
+  "config": {
+    "topic_graph": {
+      "nodes": [
+        "étoiles",
+        "infini",
+        "silence cosmique",
+        "exploration",
+        "nostalgie terrestre",
+        "découverte",
+        "solitude",
+        "émerveillement",
+        "mystère",
+        "temps"
+      ],
+      "edges": [
+        [
+          "étoiles",
+          "infini"
+        ],
+        [
+          "infini",
+          "silence cosmique"
+        ],
+        [
+          "silence cosmique",
+          "solitude"
+        ],
+        [
+          "solitude",
+          "nostalgie terrestre"
+        ],
+        [
+          "nostalgie terrestre",
+          "exploration"
+        ],
+        [
+          "exploration",
+          "découverte"
+        ],
+        [
+          "découverte",
+          "émerveillement"
+        ],
+        [
+          "émerveillement",
+          "mystère"
+        ],
+        [
+          "mystère",
+          "temps"
+        ],
+        [
+          "temps",
+          "étoiles"
+        ],
+        [
+          "exploration",
+          "silence cosmique"
+        ],
+        [
+          "découverte",
+          "infini"
+        ],
+        [
+          "solitude",
+          "émerveillement"
+        ]
+      ]
+    },
+    "form_spec": {
+      "form": "sonnet",
+      "total_lines": 14
+    },
+    "generation_params": {
+      "max_tokens": 1000,
+      "temperature": 0.8,
+      "top_p": 0.95
+    }
+  },
+  "approaches": {
+    "baseline": {
+      "description": "Modèle générique + prompt simple",
+      "poem": "Sur les étoiles, dans l'infini, je me perds,\nDans l'essence du temps, où rien ne cesse,\nLes silences cosmiques, une étreinte divine,\nOù l'expérience humaine ne peut se souvenir.\n\nLes étoiles, des lanternes de lumière blanche,\nAvec leurs nuances, une voix murmurante,\nNous nous sentons petits, dans l'immense mystère,\nMais dans leurs yeux, une beauté éternelle est échangée.\n\nLa nostalgie terrestre, une émerveillement,\nPour les secrets que les étoiles nous cachent,\nEt dans leur silence, une découverte évolutive,\nUne étreinte qui nous fait trembler.\n\nMais l'infini, l'absolu, il est à nous,\nQui nous accompagne dans l' exploration,\nEt dans ses ombres, nous trouvons la liberté,\nÀ nous-mêmes, dans la solitude éternelle.\n\nEt puis, il y a le temps, ce mystère profond,\nQui nous fait comprendre, et nous fait réfléchir,\nQue l'histoire de l'homme, est encore en cours,\nEt que chaque instant, est une découverte éternelle.\n\nNote : un sonnet est un poème de 14 vers, généralement en un ritme de 10 4 vers par couplet.",
+      "metrics": {
+        "word_count": 165,
+        "line_count": 21,
+        "char_count": 1012,
+        "vocab_size": 102,
+        "avg_line_length": 47.0,
+        "type_token_ratio": 0.6158536585365854,
+        "unique_word_ratio": 0.6158536585365854,
+        "lexical_richness": 61.58536585365854,
+        "perplexity": 93.88787158089207,
+        "graph_mean_similarity": 0.1318196788430214,
+        "graph_max_similarity": 0.25395482778549194,
+        "graph_min_similarity": 0.09919679164886475,
+        "graph_coverage": 0.0,
+        "mean_consecutive_similarity": 0.5100555837154388,
+        "overall_coherence": 0.45114386876424156,
+        "coherence_std": 0.25020440003496097
+      }
+    },
+    "structure_only": {
+      "description": "Modèle générique + graphe thématique",
+      "poem": "Voici une poésie de 14 lignes en français, dans le style d'un poète :\n\nÉtoiles éclatées dans l'infini\nComme des étoiles de la nuit, je sens l'infini\nSilence cosmique, un silence qui me tue\nDans la solitude, je cherche l'infini\nDans la découverte, je sens l'émerveillement\nUn mystère qui m'entraîne dans l'absolu\nJe me sens perdu dans l'infini et le silence\nComme un espoir qui se perd dans la nuit\nJe cherche la lumière dans l'absolu\nDans l'exploration, je sens l'émerveillement\nUn mystère qui me réveille dans l'avenir\nJe me sens un petit partenaire dans l'infini\nEt l'infini me réveille à nouveau dans la nuit",
+      "metrics": {
+        "word_count": 105,
+        "line_count": 14,
+        "char_count": 611,
+        "vocab_size": 49,
+        "avg_line_length": 42.642857142857146,
+        "type_token_ratio": 0.46153846153846156,
+        "unique_word_ratio": 0.46153846153846156,
+        "lexical_richness": 46.15384615384615,
+        "perplexity": 119.52376882950931,
+        "graph_mean_similarity": 0.07191153950989246,
+        "graph_max_similarity": 0.19278621673583984,
+        "graph_min_similarity": 0.04433364421129227,
+        "graph_coverage": 0.0,
+        "mean_consecutive_similarity": 0.07474469393491745,
+        "overall_coherence": 0.07474469393491745,
+        "coherence_std": 0.0
+      }
+    },
+    "specialization_only": {
+      "description": "Modèle fine-tuné + prompt simple",
+      "poem": "Il est tout l'univers : la nature\nD'où viennent les astres et ces fleurs,\nComme des amours pour leur maison.\nLes grands dieux qui d'ici sont faits\nOnt fait que le soleil s'évapore ;\nEt qu'en ce ciel plus grand on voit descendre\nLe soleil dans sa lumière à peine.\nCe fut un jour où j'avais pitié du monde!\nLa terre était belle au printemps.\nJe vis par moments la vie et ses pleines\nHeures et jours-là de bonheur.\nMais je regardai, fuyant mes pensées\nDu cœur solitaire dont elle se venge :\n- Je ne voudrais qu'une seule chose\nA mon âge ; ma chèvre aux abois,\nUn fruit doux et frais comme une rose! -\nL'amour! Car Dieu dit souvent : « Mon amour »\nEst aussi bellique que l'espoir.\nJe me senti toujours seul, ô libertés\nQui nous souffriront sans fin sous nos yeux.\nMon âme a perdu sa liberté,\nPareille à un soir où le soir tombe,\nAu point d'être invisible au matin...\nÔ triste nuit! Être un homme n'est pas heureux!\nDeux heures après mûri, je suis jeune encore\nPour cette existence si tendue\nQue rien ne remplit son essence humaine ;\nNul amour n'a suffrit de faire ma vie.\nCes amis d'autrefois n'arriveront jamais!\nJ'ai trop longtemps attendu quelque chose ;\nSous leurs bras, tous mes désirs sont couchés,\nSans qu'on eût pu le voir bientôt arrêter.\nQuand je sortis de mon voyage,\nVoix et rayons partout étaient assombris.\nToute énergie réelle est muette.\nQuand il y avait du soleil ou de l'eau,\nNous étions morts devant eux ; ils mouraient?\nAvait-on besoin de bien, sans tache? —\nParlez, je vous parlais moins fort! J'étouffe,\nJe te disais des mots inutiles ;\nTu ne t'intéressais pas, tu n'asimez\nDes regards vagabonds avec d'autres...\nOui, tu riais mal quand tu souriais ;\nVos lacs bleus étaient pareils aux nuages,\nRiant comme ces brumeuses ombres\nQui font un bruit caustique entre deux bucs.\nOn dirait que la mer se moque même.\nJe regardais ta tête de chevalier,\nTa tête de rossignol, ton front vainqueur.\nMes pieds tremblaient sous tes paupières noires\nEn dépit d'un poing qui me ferait voler.\nMa grande âme est profonde et vivante.\nElle peut sentir jusqu'à toi, Ophélie,\nEt me rappeller ses baisers d'aurore!\nHautement plongeur, habilement glisseur,\nAh! voyez-vous comment cet astronome,\nSon imagination, au flot divin,\nFait passer le temps au lieu des fleurs!\nMême au cerveau, comme un oiseau s'envole,\nTon âme s'enfuit vers les firmamentes!\nCar la nature entière naît, et passe!\nChaque esprit de l'infini se perd, se pose,\nMeurt en vain au fond de mon coeur englouti,\nPas un mot semble manquer à moi.\nMon œuvre est enracinée sur une pierre,\nUne pierre dans un marbre indien ;\nSur des arbres, là-bas, je sens venir\nPlus de plantes écloreuses :\nOh! dans toutes choses j'aperçois l'Eternité!\nAlors, je sais bien que mon effort va fini.\nDans vos bras mon rêve s'était consumé ;\nMaintenant notre rencontre vient-t-il!\nCette fois mon âme a pris conscience,\nEh bien! - Que puis-je dire?... Votre âme a trompé!\nSi quelqu'un venait vous poser une main\nPour vous donner l'oeuf de votre être,\nDevinez que cela rendrait la gloire\nÀ ses ordeurs effarétes encor!\nNon, non, non! Il faut que ces beaux yeux fassent noir ;\nVotre beauté n'est point une prière éternelle\nEnvers montrant le ciel céleste et pur\nAussi loin que la planète Gaïane!\nNe pouvant tenir près de moi, je vais mour",
+      "metrics": {
+        "word_count": 584,
+        "line_count": 83,
+        "char_count": 3269,
+        "vocab_size": 381,
+        "avg_line_length": 38.397590361445786,
+        "type_token_ratio": 0.6654929577464789,
+        "unique_word_ratio": 0.6654929577464789,
+        "lexical_richness": 66.54929577464789,
+        "perplexity": 86.91285171117167,
+        "graph_mean_similarity": 0.02303600199520588,
+        "graph_max_similarity": 0.15448620915412903,
+        "graph_min_similarity": -0.004627209156751633,
+        "graph_coverage": 0.0,
+        "mean_consecutive_similarity": 0.4365105405449867,
+        "overall_coherence": 0.38390702371086394,
+        "coherence_std": 0.0963546655413617
+      }
+    },
+    "structure_specialization": {
+      "description": "Modèle fine-tuné + graphe thématique",
+      "poem": "Étoiles qui s'évanouissent à l'horizon,\nInfinis des nuages, cieux de lumière\nEt du printemps que le soleil souffle ;\nSilence cosmique où la voix échappe,\nQui rit et qui pleure en vain aux horizons?\nDécouverte d'un monde caché par moi!\nSolitude autour de mon oeil fermé...\nEmergez-vous pour qu'il soit une chose!...\nMistère dans les ténèbres de ma chambre.\nTendons nos bras vers la mer ou vers Dieu :\nLoin du chemin qu'on emprunte au hasard. \\\nTemps sans fin ; ô mes heures fugitives!\nAvec vous je passe ce soir... Étoile!\nDans votre âme encore plus profonde.",
+      "metrics": {
+        "word_count": 98,
+        "line_count": 14,
+        "char_count": 558,
+        "vocab_size": 87,
+        "avg_line_length": 38.92857142857143,
+        "type_token_ratio": 0.9052631578947369,
+        "unique_word_ratio": 0.9052631578947369,
+        "lexical_richness": 90.52631578947368,
+        "perplexity": 111.13961881021048,
+        "graph_mean_similarity": 0.11120128929615021,
+        "graph_max_similarity": 0.24973952770233154,
+        "graph_min_similarity": 0.07327985763549805,
+        "graph_coverage": 0.0,
+        "mean_consecutive_similarity": 0.44440069794654846,
+        "overall_coherence": 0.4733171761035919,
+        "coherence_std": 0.07772952214145391
+      }
+    }
+  }
+}
