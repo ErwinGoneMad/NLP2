@@ -34,6 +34,13 @@ Peut-on guider un petit modèle vers l'artistique grâce à :
 - **Modèle utilisé** : Llama-3.2-1B-Instruct (quantifié en Q4_K_M)
 - **Exécution** : Locale, CPU-bound
 - **Format** : GGUF (via `llama-cpp-python`)
+- **Contexte** : 2048 tokens
+
+### 1.1. Données d'Entraînement
+
+- **Corpus** : 1818 poèmes français (HuggingFace)
+- **Statistiques** : moyenne de 264 mots, 37 lignes par poème
+- **Fine-tuning** : 600 steps sur le corpus poétique français
 
 ### 2. Échafaudage Poétique
 
@@ -43,7 +50,16 @@ Fournir des structures formelles et sémantiques :
 - **Graphes thématiques** : nœuds représentant thèmes, émotions, images
 - **Proximité sémantique** : arêtes encodant les relations (ex: deuil → mémoire → océan)
 
-### 3. Génération Itérative
+### 3. Comparaison des Approches
+
+Quatre approches sont comparées pour évaluer l'impact de la structure et de la spécialisation :
+
+1. **Baseline** : Modèle générique + prompt simple
+2. **Structure only** : Modèle générique + graphe thématique
+3. **Specialization only** : Modèle fine-tuné + prompt simple
+4. **Structure + Specialization** : Modèle fine-tuné + graphe thématique
+
+### 4. Génération Itérative
 
 #### Étape 1 : Génération initiale
 
@@ -55,16 +71,34 @@ Fournir des structures formelles et sémantiques :
 - Re-prompt le modèle pour critiquer sa propre génération
 - Évaluer la cohérence et la qualité des images
 - Générer une version révisée basée sur le feedback
+- Répéter le processus sur plusieurs itérations (typiquement 2-3)
 
-### 4. Évaluation
+### 5. Évaluation
 
-#### Quantitative
+#### Métriques Quantitatives
 
-- **Cohérence basée sur embeddings** : similarité sémantique entre strophes
-- **Diversité lexicale** : mesure de la richesse du vocabulaire
+**Métriques de base** :
+- Nombre de mots, lignes, caractères
+- Taille du vocabulaire unique
+- Longueur moyenne des lignes
+
+**Métriques basées sur embeddings** :
+- **Similarité avec graphe thématique** : moyenne, max, min
+- **Cohérence inter-strophes** : similarité sémantique entre strophes consécutives
+- **Couverture thématique** : proportion des thèmes du graphe présents dans le poème
+
+**Métriques avancées** :
 - **Perplexité** : mesure de la qualité linguistique
+- **Diversité lexicale** : type-token ratio (TTR)
+- **Richesse lexicale** : mesure de l'originalité du vocabulaire
 
-#### Qualitative
+#### Évaluation Qualitative
 
-- **Évaluation humaine** : impact émotionnel et originalité
-- **Comparaison** : contrastes interprétatifs avec des sorties de modèles plus grands (ex: GPT-4)
+- **Évaluation par LLM Juge** : utilisation de Gemini 3 pour évaluer :
+  - Score global (0-10)
+  - Qualité poétique
+  - Cohérence thématique
+  - Adhérence aux thèmes
+  - Originalité
+  - Maîtrise de la langue
+- **Comparaison** : contrastes interprétatifs avec des sorties de modèles plus grands
